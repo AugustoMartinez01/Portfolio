@@ -15,7 +15,7 @@ export const proyectos = [
     titulo: 'Fradi Compresores',
     tipo: 'Web para cliente · en equipo',
     descripcion:
-      'Sitio web para un comercio de Tucumán con más de 65 años en venta, repuestos y servicio técnico de compresores de aire. Lo desarrollé junto a Lucas Saucedo.',
+      'Sitio web para un comercio de Tucumán con más de 65 años en venta, repuestos y servicio técnico de compresores de aire. Participé como desarrollador front-end, junto a Lucas Saucedo.',
     puntos: [
       'Catálogo por categorías con fichas técnicas de cada producto',
       'Consulta por WhatsApp desde cada producto, con el mensaje ya escrito',
@@ -26,7 +26,7 @@ export const proyectos = [
     demo: 'https://fradicompresores.com.ar/',
     codigo: '',
     nota: '',
-    imagen: '',
+    imagen: '/capturas/fradi.jpg',
     visual: 'web',
   },
   {
@@ -60,10 +60,10 @@ export const proyectos = [
     ],
     tecnologias: ['JavaScript', 'API de Riot Games', 'Funciones serverless', 'Vercel'],
     estado: 'en-linea',
-    demo: 'COMPLETAR', // ← pegá acá el link de Vercel, ej: 'https://soloq-leaderboard.vercel.app'
+    demo: 'https://soloq-leaderboard.vercel.app/',
     codigo: '',
     nota: '',
-    imagen: '',
+    imagen: '/capturas/leaderboard.jpg',
     visual: 'ranking',
   },
   {
