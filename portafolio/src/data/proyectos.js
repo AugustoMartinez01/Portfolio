@@ -39,13 +39,21 @@ export const proyectos = [
     puntos: [
       'Diseño a medida a partir de la identidad del negocio',
       'Se adapta a celular, tablet y computadora',
+      'Servicios, packs y reserva de turnos por WhatsApp',
     ],
-    tecnologias: ['HTML', 'CSS', 'JavaScript', 'Diseño responsive'],
+    tecnologias: ['React', 'Vite', 'CSS', 'Diseño responsive'],
     estado: 'en-desarrollo',
     demo: '',
     codigo: '',
     nota: '',
     imagen: '',
+    imagenes: [
+      '/capturas/agl-inicio.jpg',
+      '/capturas/agl-servicios.jpg',
+      '/capturas/agl-packs.jpg',
+      '/capturas/agl-promo.jpg',
+      '/capturas/agl-contacto.jpg',
+    ],
     visual: 'web',
   },
   {
