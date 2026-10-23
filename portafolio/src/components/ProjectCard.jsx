@@ -1,4 +1,5 @@
 import Ilustracion from './Ilustracion.jsx'
+import Galeria from './Galeria.jsx'
 import { linkPublicado } from '../data/enlaces.js'
 
 const textoEstado = {
@@ -18,17 +19,21 @@ export default function ProjectCard({ proyecto, numero }) {
     codigo,
     nota,
     imagen,
+    imagenes,
     visual,
   } = proyecto
 
   // Si está en línea y tiene link, la tarjeta entera lleva al proyecto publicado.
   const link = linkPublicado(proyecto)
 
-  const contenido = (
-    <>
+  // Una o varias capturas: "imagenes" (lista) tiene prioridad sobre "imagen".
+  const capturas = imagenes?.length ? imagenes : imagen ? [imagen] : []
+
+  return (
+    <article className={`proyecto${link ? ' proyecto--link' : ''}`} id={id}>
       <div className="proyecto__imagen">
-        {imagen ? (
-          <img src={imagen} alt={`Captura de ${titulo}`} loading="lazy" />
+        {capturas.length ? (
+          <Galeria imagenes={capturas} titulo={titulo} />
         ) : (
           <Ilustracion tipo={visual} />
         )}
@@ -41,7 +46,22 @@ export default function ProjectCard({ proyecto, numero }) {
           <span className={`estado estado--${estado}`}>{textoEstado[estado]}</span>
         </div>
 
-        <h3>{titulo}</h3>
+        <h3>
+          {link ? (
+            // Este link cubre toda la tarjeta (ver .proyecto__link-total en el CSS)
+            <a
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+              className="proyecto__link-total"
+              aria-label={`${titulo}: abrir el proyecto publicado`}
+            >
+              {titulo}
+            </a>
+          ) : (
+            titulo
+          )}
+        </h3>
         <p className="proyecto__descripcion">{descripcion}</p>
 
         <ul className="proyecto__puntos">
@@ -73,27 +93,6 @@ export default function ProjectCard({ proyecto, numero }) {
           )
         )}
       </div>
-    </>
-  )
-
-  if (link) {
-    return (
-      <a
-        className="proyecto proyecto--link"
-        id={id}
-        href={link}
-        target="_blank"
-        rel="noreferrer"
-        aria-label={`${titulo}: abrir el proyecto publicado`}
-      >
-        {contenido}
-      </a>
-    )
-  }
-
-  return (
-    <article className="proyecto" id={id}>
-      {contenido}
     </article>
   )
 }

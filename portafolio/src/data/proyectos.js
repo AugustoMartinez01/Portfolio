@@ -6,6 +6,7 @@
 //       son clickeables (la tarjeta entera abre ese link).
 // codigo: link al repositorio. Dejalos en '' si no hay (el botón no aparece).
 // imagen: ruta a una captura dentro de /public, por ejemplo '/capturas/agl.png'.
+// imagenes: lista de varias capturas; si la cargás, la tarjeta muestra flechas para pasarlas.
 //         Si la dejás en '', se muestra la ilustración de "visual".
 // visual: 'web' | 'ranking' | 'finanzas' | 'escritorio'
 
@@ -82,7 +83,14 @@ export const proyectos = [
     demo: '',
     codigo: '',
     nota: '',
-    imagen: '/capturas/mis-gastos.jpg',
+    imagen: '',
+    imagenes: [
+      '/capturas/mis-gastos.jpg',
+      '/capturas/mis-gastos-inicio.jpg',
+      '/capturas/mis-gastos-estadisticas.jpg',
+      '/capturas/mis-gastos-movimientos.jpg',
+      '/capturas/mis-gastos-login.jpg',
+    ],
     visual: 'finanzas',
   },
   {
