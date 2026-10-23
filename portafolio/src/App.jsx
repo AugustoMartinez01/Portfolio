@@ -4,6 +4,7 @@ import Proyectos from './components/Proyectos.jsx'
 import SobreMi from './components/SobreMi.jsx'
 import Contacto from './components/Contacto.jsx'
 import Footer from './components/Footer.jsx'
+import BotonWhatsApp from './components/WhatsApp.jsx'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Contacto />
       </main>
       <Footer />
+      <BotonWhatsApp />
     </>
   )
 }

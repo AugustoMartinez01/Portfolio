@@ -1,4 +1,5 @@
 import { perfil } from '../data/perfil.js'
+import { linkWhatsApp, IconoWhatsApp } from './WhatsApp.jsx'
 
 // Abre Gmail en una pestaña nueva con un mail nuevo dirigido a vos
 // y el asunto ya escrito.
@@ -28,6 +29,17 @@ export default function Contacto() {
           >
             {perfil.email}
           </a>
+          {perfil.whatsapp && (
+            <a
+              href={linkWhatsApp()}
+              target="_blank"
+              rel="noreferrer"
+              className="boton boton--whatsapp"
+            >
+              <IconoWhatsApp tamano={20} />
+              Escribime por WhatsApp
+            </a>
+          )}
           <div className="contacto__redes">
             {perfil.github && (
               <a href={perfil.github} target="_blank" rel="noreferrer">

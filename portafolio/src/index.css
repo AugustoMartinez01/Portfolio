@@ -817,6 +817,55 @@ a.panel__fila:hover {
   color: #fff;
 }
 
+/* ========== WhatsApp ========== */
+.boton--whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.boton--whatsapp:hover {
+  background: #1ebe5b;
+}
+
+.whatsapp-flotante {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.whatsapp-flotante:hover {
+  transform: scale(1.07);
+  background: #1ebe5b;
+}
+
+.contacto__acciones {
+  align-items: stretch;
+}
+
+@media (max-width: 640px) {
+  .whatsapp-flotante {
+    right: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
+  }
+
+  /* Deja lugar para que el botón flotante no tape el pie */
+  .footer__fila {
+    padding-right: 72px;
+  }
+}
+
 /* ========== Footer ========== */
 .footer {
   background: var(--marino-950);
