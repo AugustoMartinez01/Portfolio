@@ -110,14 +110,22 @@ export const proyectos = [
     puntos: [
       'Corrección automática con baremo argentino',
       'Sistema propio de licencias',
+      'Interpretación automática e informe en Word o PDF',
       'Se descarga e instala en la computadora',
     ],
-    tecnologias: ['Aplicación de escritorio', 'Visual Studio', 'Sistema de licencias'],
+    tecnologias: ['Electron', 'JavaScript', 'Sistema de licencias', 'Informes Word y PDF'],
     estado: 'en-desarrollo',
     demo: '',
     codigo: '',
     nota: 'Software comercial · código privado',
     imagen: '',
+    imagenes: [
+      '/capturas/wisc-resultados.jpg',
+      '/capturas/wisc-inicio.jpg',
+      '/capturas/wisc-puntajes.jpg',
+      '/capturas/wisc-observaciones.jpg',
+      '/capturas/wisc-informe.jpg',
+    ],
     visual: 'escritorio',
   },
 ]
