@@ -12,6 +12,35 @@
 
 export const proyectos = [
   {
+    id: 'agendalo',
+    titulo: 'Agendalo — Turnos online',
+    tipo: 'Producto propio · SaaS',
+    descripcion:
+      'Sistema de turnos online para negocios: cada uno tiene su propia página de reservas, con su logo y sus colores, y un panel para manejar la agenda. Lo vendo como suscripción mensual y lo administro desde un panel propio.',
+    puntos: [
+      'Página de reservas por negocio: servicio, día y horario libre desde el celular',
+      'Agenda con calendario mensual, turnos para confirmar y carga manual',
+      'Avisos por WhatsApp con el mensaje ya armado para cliente y negocio',
+      'Panel de administrador: pruebas gratis, pagos y vencimientos automáticos',
+      'La base de datos impide turnos superpuestos y cada negocio solo ve sus datos',
+    ],
+    tecnologias: ['React', 'Vite', 'Supabase', 'PostgreSQL', 'Row Level Security', 'Vercel'],
+    estado: 'en-linea',
+    demo: 'https://agendalo-alpha.vercel.app/',
+    codigo: '',
+    nota: 'Producto comercial · código privado',
+    imagen: '',
+    imagenes: [
+      '/capturas/agendalo-agenda.jpg',
+      '/capturas/agendalo-reservas.jpg',
+      '/capturas/agendalo-horarios.jpg',
+      '/capturas/agendalo-celular.jpg',
+      '/capturas/agendalo-personalizacion.jpg',
+      '/capturas/agendalo-admin.jpg',
+    ],
+    visual: 'web',
+  },
+  {
     id: 'fradi-compresores',
     titulo: 'Fradi Compresores',
     tipo: 'Web para cliente · en equipo',
