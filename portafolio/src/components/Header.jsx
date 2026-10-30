@@ -12,7 +12,7 @@ export default function Header() {
       <div className="contenedor header__fila">
         <a href="#inicio" className="marca" aria-label={t.header.irInicio}>
           <span className="marca__logo" aria-hidden="true">
-            <Logo tamano={24} acento="#9cc3f0" />
+            <Logo tamano={24} color="#06142b" acento="#0055a4" />
           </span>
           <span className="marca__nombre">{perfil.nombre}</span>
         </a>

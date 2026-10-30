@@ -1,4 +1,4 @@
-// Logo de tukodes: una T y una K en bloques (la T en blanco, los brazos de la K en azul).
+// Logo de tukodes: una T y una K en bloques. Versión oficial: fondo blanco, T azul oscuro y K azul.
 // Se usa en el encabezado. El mismo dibujo está en public/favicon.svg.
 export default function Logo({ tamano = 30, color = '#ffffff', acento = '#2e7bd6' }) {
   return (
