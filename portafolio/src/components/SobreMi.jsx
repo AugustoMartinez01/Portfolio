@@ -16,6 +16,13 @@ export default function SobreMi() {
           <p>{t.sobreMi.parrafo1(perfil.apodo)}</p>
           <p>{t.sobreMi.parrafo2}</p>
 
+          <h3 className="sobre__subtitulo">{t.sobreMi.idiomas}</h3>
+          <ul className="chips chips--grandes">
+            {t.sobreMi.listaIdiomas.map((i) => (
+              <li key={i}>{i}</li>
+            ))}
+          </ul>
+
           <h3 className="sobre__subtitulo">{t.sobreMi.herramientas}</h3>
           <ul className="chips chips--grandes">
             {herramientas.map((h) => (

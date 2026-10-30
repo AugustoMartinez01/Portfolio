@@ -9,8 +9,8 @@
 // imagenes: lista de varias capturas; si la cargás, la tarjeta muestra flechas para pasarlas.
 //         Si la dejás en '', se muestra la ilustración de "visual".
 // visual: 'web' | 'ranking' | 'finanzas' | 'escritorio'
-// en: los mismos textos en inglés (titulo, tipo, descripcion, puntos, tecnologias, nota).
-//     Lo que no esté en "en" se muestra igual que en español.
+// en / fr: los mismos textos en inglés y en francés (titulo, tipo, descripcion, puntos, tecnologias, nota).
+//     Lo que no esté traducido se muestra igual que en español.
 
 export const proyectos = [
   {
@@ -55,6 +55,20 @@ export const proyectos = [
       ],
       nota: 'Commercial product · private code',
     },
+    // Textos en francés
+    fr: {
+      titulo: 'Agendalo — Réservation en ligne',
+      tipo: 'Produit propre · SaaS',
+      descripcion: 'Système de prise de rendez-vous en ligne pour les commerces : chacun a sa propre page de réservation, avec son logo et ses couleurs, et un tableau de bord pour gérer son agenda. Je le vends sous forme d\'abonnement mensuel et je le gère depuis mon propre panneau d\'administration.',
+      puntos: [
+        'Page de réservation pour chaque commerce : service, jour et créneau libre, depuis le téléphone',
+        'Agenda avec calendrier mensuel, rendez-vous à confirmer et ajout manuel',
+        'Notifications WhatsApp avec le message déjà rédigé pour le client et le commerce',
+        'Panneau d\'administration : essais gratuits, paiements et échéances automatiques',
+        'La base de données empêche les rendez-vous qui se chevauchent et chaque commerce ne voit que ses propres données',
+      ],
+      nota: 'Produit commercial · code privé',
+    },
   },
   {
     id: 'fradi-compresores',
@@ -88,6 +102,22 @@ export const proyectos = [
         'Supabase',
         'Vercel',
         'Teamwork',
+      ],
+    },
+    // Textos en francés
+    fr: {
+      tipo: 'Site pour un client · en équipe',
+      descripcion: 'Site web pour une entreprise de Tucumán qui vend, répare et fournit des pièces pour compresseurs d\'air depuis plus de 65 ans. J\'ai participé en tant que développeur front-end, avec Lucas Saucedo.',
+      puntos: [
+        'Catalogue par catégories avec la fiche technique de chaque produit',
+        'Demande par WhatsApp depuis chaque produit, avec le message déjà rédigé',
+        'Formulaire de contact et localisation avec Google Maps',
+      ],
+      tecnologias: [
+        'Next.js',
+        'Supabase',
+        'Vercel',
+        'Travail en équipe',
       ],
     },
   },
@@ -126,6 +156,17 @@ export const proyectos = [
         'Cart with key copies and installation that builds the order for WhatsApp',
         '3-step mobile locksmith quote with GPS location',
         'Dashboard for the owner to add and edit products, plus Mercado Pago payments',
+      ],
+    },
+    // Textos en francés
+    fr: {
+      tipo: 'Site pour un client',
+      descripcion: 'Site web avec boutique en ligne pour une serrurerie de Tucumán. Il reprend l\'identité de la carte de visite du commerce et permet de choisir des serrures, de préparer sa commande et de demander un devis de serrurerie à domicile, le tout finalisé par WhatsApp.',
+      puntos: [
+        'Catalogue avec photos, filtres par marque et par type, et guide pour bien choisir',
+        'Panier avec doubles de clés et pose, qui prépare la commande pour WhatsApp',
+        'Devis de serrurerie à domicile en 3 étapes, avec localisation GPS',
+        'Panneau pour que le propriétaire ajoute et modifie ses articles, et paiement avec Mercado Pago',
       ],
     },
   },
@@ -170,6 +211,22 @@ export const proyectos = [
         'Responsive design',
       ],
     },
+    // Textos en francés
+    fr: {
+      tipo: 'Site pour un client',
+      descripcion: 'Site web pour une entreprise de detailing automobile. Le design reprend l\'identité visuelle de ses flyers, pour que la marque soit la même en ligne et dans la rue.',
+      puntos: [
+        'Design sur mesure à partir de l\'identité de l\'entreprise',
+        'S\'adapte au téléphone, à la tablette et à l\'ordinateur',
+        'Services, formules et prise de rendez-vous par WhatsApp',
+      ],
+      tecnologias: [
+        'React',
+        'Vite',
+        'CSS',
+        'Design responsive',
+      ],
+    },
   },
   {
     id: 'soloq-leaderboard',
@@ -202,6 +259,21 @@ export const proyectos = [
         'JavaScript',
         'Riot Games API',
         'Serverless functions',
+      ],
+    },
+    // Textos en francés
+    fr: {
+      tipo: 'Projet personnel',
+      descripcion: 'Classement en direct pour un tournoi SoloQ de League of Legends (serveur LAS) entre joueurs de Tucumán. Il récupère les données de chaque participant via l\'API officielle de Riot Games.',
+      puntos: [
+        'Données en temps réel depuis l\'API de Riot',
+        'Clé de l\'API protégée côté serveur',
+        'Classement avec podium, rang, rôles et taux de victoire de chaque joueur',
+      ],
+      tecnologias: [
+        'JavaScript',
+        'API Riot Games',
+        'Fonctions serverless',
       ],
     },
   },
@@ -244,6 +316,22 @@ export const proyectos = [
         'TypeScript',
         'Supabase',
         'Installable app (PWA)',
+      ],
+    },
+    // Textos en francés
+    fr: {
+      tipo: 'Projet personnel',
+      descripcion: 'Application web pour enregistrer ses dépenses et ses revenus et voir où part l\'argent, par catégories comme l\'alimentation, les factures ou les loisirs.',
+      puntos: [
+        'Comptes utilisateurs',
+        'Installable comme une appli sur téléphone et ordinateur',
+        'Résumé par catégorie',
+      ],
+      tecnologias: [
+        'Next.js',
+        'TypeScript',
+        'Supabase',
+        'Appli installable (PWA)',
       ],
     },
   },
@@ -291,6 +379,25 @@ export const proyectos = [
         'Word and PDF reports',
       ],
       nota: 'Commercial software · private code',
+    },
+    // Textos en francés
+    fr: {
+      titulo: 'Correction WISC-IV',
+      tipo: 'Logiciel de bureau',
+      descripcion: 'Logiciel de bureau pour corriger l\'échelle d\'intelligence WISC-IV avec l\'étalonnage argentin. Il automatise le calcul des scores pour que le professionnel gagne du temps et évite les erreurs.',
+      puntos: [
+        'Correction automatique avec étalonnage argentin',
+        'Système de licences propre',
+        'Interprétation automatique et rapport en Word ou PDF',
+        'Se télécharge et s\'installe sur l\'ordinateur',
+      ],
+      tecnologias: [
+        'Electron',
+        'JavaScript',
+        'Système de licences',
+        'Rapports Word et PDF',
+      ],
+      nota: 'Logiciel commercial · code privé',
     },
   },
 ]

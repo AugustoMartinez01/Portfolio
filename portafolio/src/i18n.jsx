@@ -1,15 +1,15 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 import { textos } from './data/textos.js'
 
-// Maneja el idioma de toda la página (español / inglés).
+// Maneja el idioma de toda la página (español / inglés / francés).
 const IdiomaContext = createContext(null)
 
-const IDIOMAS = ['es', 'en']
+export const IDIOMAS = ['es', 'en', 'fr']
 
 // Elige el idioma con el que arranca la página:
-// 1) si el link trae ?lang=en o ?lang=es, ese
+// 1) si el link trae ?lang=en, ?lang=fr o ?lang=es, ese
 // 2) si la persona ya eligió uno antes, ese
-// 3) si no, el idioma del navegador (español → es, cualquier otro → en)
+// 3) si no, el idioma del navegador (español → es, francés → fr, cualquier otro → en)
 function idiomaInicial() {
   try {
     const delLink = new URLSearchParams(window.location.search).get('lang')
@@ -24,7 +24,9 @@ function idiomaInicial() {
     /* el navegador no deja guardar */
   }
   const navegador = (navigator.language || 'es').toLowerCase()
-  return navegador.startsWith('es') ? 'es' : 'en'
+  if (navegador.startsWith('es')) return 'es'
+  if (navegador.startsWith('fr')) return 'fr'
+  return 'en'
 }
 
 export function ProveedorIdioma({ children }) {
@@ -53,7 +55,7 @@ export function useIdioma() {
 }
 
 // Devuelve el proyecto con sus textos en el idioma elegido.
-// Los textos en inglés están en el campo "en" de cada proyecto (data/proyectos.js).
+// Las traducciones están en los campos "en" y "fr" de cada proyecto (data/proyectos.js).
 export function proyectoEnIdioma(proyecto, idioma) {
-  return idioma === 'en' && proyecto.en ? { ...proyecto, ...proyecto.en } : proyecto
+  return idioma !== 'es' && proyecto[idioma] ? { ...proyecto, ...proyecto[idioma] } : proyecto
 }

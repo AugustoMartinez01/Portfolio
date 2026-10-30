@@ -1,5 +1,7 @@
 import { perfil } from '../data/perfil.js'
-import { useIdioma } from '../i18n.jsx'
+import { useIdioma, IDIOMAS } from '../i18n.jsx'
+
+const NOMBRES = { es: 'Español', en: 'English', fr: 'Français' }
 
 export default function Header() {
   const { t, idioma, setIdioma } = useIdioma()
@@ -18,14 +20,14 @@ export default function Header() {
 
           {/* Botón para cambiar de idioma */}
           <div className="idioma" role="group" aria-label={t.header.idioma}>
-            {['es', 'en'].map((codigo) => (
+            {IDIOMAS.map((codigo) => (
               <button
                 key={codigo}
                 type="button"
                 className={idioma === codigo ? 'activo' : ''}
                 aria-pressed={idioma === codigo}
                 lang={codigo}
-                title={codigo === 'es' ? 'Español' : 'English'}
+                title={NOMBRES[codigo]}
                 onClick={() => setIdioma(codigo)}
               >
                 {codigo.toUpperCase()}
