@@ -2,7 +2,7 @@
 
 Mi portafolio personal, con los proyectos en los que trabajé y en los que estoy trabajando.
 
-**Ver en línea:** [tukodes.vercel.app](https://tukodes.vercel.app)
+**Ver en línea:** [tukodes.com.ar](https://tukodes.com.ar)
 
 ## Qué muestra
 
