@@ -1,5 +1,6 @@
 import { perfil } from '../data/perfil.js'
 import { useIdioma, IDIOMAS } from '../i18n.jsx'
+import Logo from './Logo.jsx'
 
 const NOMBRES = { es: 'Español', en: 'English', fr: 'Français' }
 
@@ -10,7 +11,9 @@ export default function Header() {
     <header className="header">
       <div className="contenedor header__fila">
         <a href="#inicio" className="marca" aria-label={t.header.irInicio}>
-          <span className="marca__logo" aria-hidden="true">AM</span>
+          <span className="marca__logo" aria-hidden="true">
+            <Logo tamano={24} acento="#9cc3f0" />
+          </span>
           <span className="marca__nombre">{perfil.nombre}</span>
         </a>
 

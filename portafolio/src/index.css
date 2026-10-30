@@ -203,9 +203,6 @@ img {
   height: 36px;
   border-radius: 9px;
   background: var(--francia);
-  font-weight: 800;
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
 }
 
 .marca__nombre {
