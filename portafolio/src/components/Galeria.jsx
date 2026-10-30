@@ -1,8 +1,11 @@
 import { useState } from 'react'
+import Visor from './Visor.jsx'
 
 // Muestra una o varias capturas. Con más de una, aparecen flechas y puntitos.
+// Tocar la foto la abre en grande (Visor); el resto de la tarjeta sigue llevando al link.
 export default function Galeria({ imagenes, titulo }) {
   const [actual, setActual] = useState(0)
+  const [visorAbierto, setVisorAbierto] = useState(false)
   const total = imagenes.length
 
   const ir = (indice, evento) => {
@@ -10,6 +13,12 @@ export default function Galeria({ imagenes, titulo }) {
     evento.preventDefault()
     evento.stopPropagation()
     setActual((indice + total) % total)
+  }
+
+  const abrirVisor = (evento) => {
+    evento.preventDefault()
+    evento.stopPropagation()
+    setVisorAbierto(true)
   }
 
   return (
@@ -28,6 +37,21 @@ export default function Galeria({ imagenes, titulo }) {
           />
         ))}
       </div>
+
+      {/* Capa que cubre la foto: al tocarla se abre en grande */}
+      <button
+        type="button"
+        className="galeria__ampliar"
+        onClick={abrirVisor}
+        aria-label={`Ver en grande las capturas de ${titulo}`}
+      >
+        <span className="galeria__lupa" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+          </svg>
+          Ver en grande
+        </span>
+      </button>
 
       {total > 1 && (
         <>
@@ -60,6 +84,15 @@ export default function Galeria({ imagenes, titulo }) {
             ))}
           </div>
         </>
+      )}
+
+      {visorAbierto && (
+        <Visor
+          imagenes={imagenes}
+          titulo={titulo}
+          inicial={actual}
+          alCerrar={() => setVisorAbierto(false)}
+        />
       )}
     </div>
   )
