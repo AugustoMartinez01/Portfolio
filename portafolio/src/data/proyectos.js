@@ -60,6 +60,33 @@ export const proyectos = [
     visual: 'web',
   },
   {
+    id: 'serafin-cerrajeria',
+    titulo: 'Serafín Cerrajería',
+    tipo: 'Web para cliente',
+    descripcion:
+      'Sitio web con tienda para una cerrajería de Tucumán. Usa la identidad de la tarjeta del negocio y permite elegir cerraduras, armar el pedido y pedir presupuesto de cerrajería móvil, todo con cierre por WhatsApp.',
+    puntos: [
+      'Catálogo con fotos, filtros por marca y tipo, y guía para elegir',
+      'Carrito con copias de llaves y colocación, que arma el pedido para WhatsApp',
+      'Presupuesto de cerrajería móvil en 3 pasos, con ubicación por GPS',
+      'Panel para que el dueño cargue y edite artículos, y pago con Mercado Pago',
+    ],
+    tecnologias: ['React', 'Vite', 'Supabase', 'Mercado Pago'],
+    estado: 'en-desarrollo',
+    demo: '',
+    codigo: '',
+    nota: '',
+    imagen: '',
+    imagenes: [
+      '/capturas/serafin-inicio.jpg',
+      '/capturas/serafin-productos.jpg',
+      '/capturas/serafin-catalogo.jpg',
+      '/capturas/serafin-servicios.jpg',
+      '/capturas/serafin-presupuesto.jpg',
+    ],
+    visual: 'web',
+  },
+  {
     id: 'agl-detailing',
     titulo: 'AGL Detailing',
     tipo: 'Web para cliente',
