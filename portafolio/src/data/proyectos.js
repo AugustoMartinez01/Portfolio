@@ -9,6 +9,8 @@
 // imagenes: lista de varias capturas; si la cargás, la tarjeta muestra flechas para pasarlas.
 //         Si la dejás en '', se muestra la ilustración de "visual".
 // visual: 'web' | 'ranking' | 'finanzas' | 'escritorio'
+// en: los mismos textos en inglés (titulo, tipo, descripcion, puntos, tecnologias, nota).
+//     Lo que no esté en "en" se muestra igual que en español.
 
 export const proyectos = [
   {
@@ -39,6 +41,20 @@ export const proyectos = [
       '/capturas/agendalo-admin.jpg',
     ],
     visual: 'web',
+    // Textos en inglés (si falta alguno, se usa el de español)
+    en: {
+      titulo: 'Agendalo — Online booking',
+      tipo: 'Own product · SaaS',
+      descripcion: 'Online booking system for businesses: each one gets its own booking page, with its logo and colors, and a dashboard to manage the schedule. I sell it as a monthly subscription and run it from my own admin panel.',
+      puntos: [
+        'Booking page for each business: service, day and free time slot, from the phone',
+        'Schedule with a monthly calendar, bookings to confirm and manual entries',
+        'WhatsApp notifications with the message already written for the client and the business',
+        'Admin panel: free trials, payments and automatic expirations',
+        'The database prevents overlapping bookings and each business only sees its own data',
+      ],
+      nota: 'Commercial product · private code',
+    },
   },
   {
     id: 'fradi-compresores',
@@ -58,6 +74,22 @@ export const proyectos = [
     nota: '',
     imagen: '/capturas/fradi.jpg',
     visual: 'web',
+    // Textos en inglés (si falta alguno, se usa el de español)
+    en: {
+      tipo: 'Client website · team project',
+      descripcion: 'Website for a business in Tucumán with over 65 years selling, repairing and supplying parts for air compressors. I worked as a front-end developer together with Lucas Saucedo.',
+      puntos: [
+        'Catalog by category with technical specs for each product',
+        'WhatsApp inquiry from every product, with the message already written',
+        'Contact form and location with Google Maps',
+      ],
+      tecnologias: [
+        'Next.js',
+        'Supabase',
+        'Vercel',
+        'Teamwork',
+      ],
+    },
   },
   {
     id: 'serafin-cerrajeria',
@@ -85,6 +117,17 @@ export const proyectos = [
       '/capturas/serafin-presupuesto.jpg',
     ],
     visual: 'web',
+    // Textos en inglés (si falta alguno, se usa el de español)
+    en: {
+      tipo: 'Client website',
+      descripcion: 'Website with an online store for a locksmith in Tucumán. It uses the brand identity from the business card and lets customers choose locks, build their order and request a mobile locksmith quote, all wrapped up through WhatsApp.',
+      puntos: [
+        'Catalog with photos, filters by brand and type, and a buying guide',
+        'Cart with key copies and installation that builds the order for WhatsApp',
+        '3-step mobile locksmith quote with GPS location',
+        'Dashboard for the owner to add and edit products, plus Mercado Pago payments',
+      ],
+    },
   },
   {
     id: 'agl-detailing',
@@ -111,6 +154,22 @@ export const proyectos = [
       '/capturas/agl-contacto.jpg',
     ],
     visual: 'web',
+    // Textos en inglés (si falta alguno, se usa el de español)
+    en: {
+      tipo: 'Client website',
+      descripcion: 'Website for a car detailing business. The design follows the visual identity of the business\'s flyers, so the brand looks the same online and on the street.',
+      puntos: [
+        'Custom design based on the business identity',
+        'Adapts to phone, tablet and desktop',
+        'Services, packages and booking through WhatsApp',
+      ],
+      tecnologias: [
+        'React',
+        'Vite',
+        'CSS',
+        'Responsive design',
+      ],
+    },
   },
   {
     id: 'soloq-leaderboard',
@@ -130,6 +189,21 @@ export const proyectos = [
     nota: '',
     imagen: '/capturas/leaderboard.jpg',
     visual: 'ranking',
+    // Textos en inglés (si falta alguno, se usa el de español)
+    en: {
+      tipo: 'Personal project',
+      descripcion: 'Live leaderboard for a League of Legends SoloQ tournament (LAS server) among players from Tucumán. It pulls each participant\'s data from the official Riot Games API.',
+      puntos: [
+        'Real-time data from the Riot API',
+        'API key protected on the server side',
+        'Ranking with podium, rank, roles and win rate for each player',
+      ],
+      tecnologias: [
+        'JavaScript',
+        'Riot Games API',
+        'Serverless functions',
+      ],
+    },
   },
   {
     id: 'mis-gastos',
@@ -156,6 +230,22 @@ export const proyectos = [
       '/capturas/mis-gastos-login.jpg',
     ],
     visual: 'finanzas',
+    // Textos en inglés (si falta alguno, se usa el de español)
+    en: {
+      tipo: 'Personal project',
+      descripcion: 'Web app to track expenses and income and see where the money goes, split into categories like food, bills or entertainment.',
+      puntos: [
+        'User accounts',
+        'Installable as an app on phone and computer',
+        'Summary by category',
+      ],
+      tecnologias: [
+        'Next.js',
+        'TypeScript',
+        'Supabase',
+        'Installable app (PWA)',
+      ],
+    },
   },
   {
     id: 'escala-wisc4',
@@ -183,5 +273,24 @@ export const proyectos = [
       '/capturas/wisc-informe.jpg',
     ],
     visual: 'escritorio',
+    // Textos en inglés (si falta alguno, se usa el de español)
+    en: {
+      titulo: 'WISC-IV Scoring',
+      tipo: 'Desktop software',
+      descripcion: 'Desktop program to score the WISC-IV intelligence scale using Argentine norms. It automates the score calculations so professionals save time and avoid mistakes.',
+      puntos: [
+        'Automatic scoring with Argentine norms',
+        'Custom licensing system',
+        'Automatic interpretation and report in Word or PDF',
+        'Downloaded and installed on the computer',
+      ],
+      tecnologias: [
+        'Electron',
+        'JavaScript',
+        'Licensing system',
+        'Word and PDF reports',
+      ],
+      nota: 'Commercial software · private code',
+    },
   },
 ]

@@ -1,8 +1,9 @@
 import { perfil } from '../data/perfil.js'
+import { useIdioma } from '../i18n.jsx'
 
 // Arma el link de WhatsApp con un mensaje ya escrito
-export function linkWhatsApp() {
-  const mensaje = encodeURIComponent('Hola Augusto, vi tu portafolio y quería consultarte por un proyecto.')
+export function linkWhatsApp(texto) {
+  const mensaje = encodeURIComponent(texto)
   return `https://wa.me/${perfil.whatsapp}?text=${mensaje}`
 }
 
@@ -16,14 +17,16 @@ export function IconoWhatsApp({ tamano = 24 }) {
 
 // Botón flotante, fijo abajo a la derecha
 export default function BotonWhatsApp() {
+  const { t } = useIdioma()
+
   return (
     <a
-      href={linkWhatsApp()}
+      href={linkWhatsApp(t.contacto.mensajeWhatsApp)}
       target="_blank"
       rel="noreferrer"
       className="whatsapp-flotante"
-      aria-label="Escribime por WhatsApp"
-      title="Escribime por WhatsApp"
+      aria-label={t.contacto.whatsapp}
+      title={t.contacto.whatsapp}
     >
       <IconoWhatsApp tamano={28} />
     </a>

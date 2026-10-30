@@ -1,27 +1,22 @@
 import { perfil, herramientas } from '../data/perfil.js'
+import { useIdioma } from '../i18n.jsx'
 
 export default function SobreMi() {
+  const { t } = useIdioma()
+
   return (
     <section className="seccion seccion--alterna" id="sobre-mi">
       <div className="contenedor sobre">
         <div className="seccion__encabezado">
-          <p className="etiqueta">02 — Sobre mí</p>
-          <h2>Aprendo construyendo</h2>
+          <p className="etiqueta">{t.sobreMi.etiqueta}</p>
+          <h2>{t.sobreMi.titulo}</h2>
         </div>
 
         <div className="sobre__texto">
-          <p>
-            Me llamo Augusto, pero me dicen {perfil.apodo}. Soy desarrollador web en
-            Tucumán. Estudio programación y aplico lo que aprendo en proyectos
-            que tienen usuarios reales: un negocio que necesita mostrarse,
-            profesionales que necesitan corregir más rápido.
-          </p>
-          <p>
-            Me interesa que lo que hago se vea prolijo, funcione bien en
-            cualquier pantalla y sea fácil de mantener.
-          </p>
+          <p>{t.sobreMi.parrafo1(perfil.apodo)}</p>
+          <p>{t.sobreMi.parrafo2}</p>
 
-          <h3 className="sobre__subtitulo">Herramientas</h3>
+          <h3 className="sobre__subtitulo">{t.sobreMi.herramientas}</h3>
           <ul className="chips chips--grandes">
             {herramientas.map((h) => (
               <li key={h}>{h}</li>

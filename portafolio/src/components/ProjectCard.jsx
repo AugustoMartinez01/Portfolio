@@ -1,13 +1,11 @@
 import Ilustracion from './Ilustracion.jsx'
 import Galeria from './Galeria.jsx'
 import { linkPublicado } from '../data/enlaces.js'
+import { useIdioma } from '../i18n.jsx'
 
-const textoEstado = {
-  'en-linea': 'En línea',
-  'en-desarrollo': 'En desarrollo',
-}
-
+// Recibe el proyecto ya traducido al idioma elegido (ver Proyectos.jsx)
 export default function ProjectCard({ proyecto, numero }) {
+  const { t } = useIdioma()
   const {
     id,
     titulo,
@@ -43,7 +41,7 @@ export default function ProjectCard({ proyecto, numero }) {
       <div className="proyecto__cuerpo">
         <div className="proyecto__meta">
           <span className="proyecto__tipo">{tipo}</span>
-          <span className={`estado estado--${estado}`}>{textoEstado[estado]}</span>
+          <span className={`estado estado--${estado}`}>{t.estados[estado]}</span>
         </div>
 
         <h3>
@@ -54,7 +52,7 @@ export default function ProjectCard({ proyecto, numero }) {
               target="_blank"
               rel="noreferrer"
               className="proyecto__link-total"
-              aria-label={`${titulo}: abrir el proyecto publicado`}
+              aria-label={t.proyectos.abrir(titulo)}
             >
               {titulo}
             </a>
@@ -70,7 +68,7 @@ export default function ProjectCard({ proyecto, numero }) {
           ))}
         </ul>
 
-        <ul className="chips" aria-label="Tecnologías">
+        <ul className="chips" aria-label={t.proyectos.tecnologias}>
           {tecnologias.map((t) => (
             <li key={t}>{t}</li>
           ))}
@@ -78,14 +76,14 @@ export default function ProjectCard({ proyecto, numero }) {
 
         {link ? (
           <div className="proyecto__pie">
-            <span className="boton boton--chico">Ver proyecto en vivo ↗</span>
+            <span className="boton boton--chico">{t.proyectos.verEnVivo}</span>
           </div>
         ) : (
           (codigo || nota) && (
             <div className="proyecto__pie">
               {codigo && (
                 <a href={codigo} target="_blank" rel="noreferrer" className="enlace">
-                  Código en GitHub ↗
+                  {t.proyectos.codigo}
                 </a>
               )}
               {nota && <span className="proyecto__nota">{nota}</span>}

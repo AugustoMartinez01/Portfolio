@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
+import { useIdioma } from '../i18n.jsx'
 
 // Muestra las capturas en grande, a pantalla completa.
 // Se cierra con la X, con Escape o tocando el fondo. Flechas del teclado para pasar.
 export default function Visor({ imagenes, titulo, inicial, alCerrar }) {
+  const { t } = useIdioma()
   const [actual, setActual] = useState(inicial)
   const total = imagenes.length
   const ir = (i) => setActual((i + total) % total)
@@ -29,7 +31,7 @@ export default function Visor({ imagenes, titulo, inicial, alCerrar }) {
       className="visor"
       role="dialog"
       aria-modal="true"
-      aria-label={`Capturas de ${titulo}`}
+      aria-label={t.galeria.visor(titulo)}
       onClick={alCerrar}
     >
       <div className="visor__barra" onClick={(e) => e.stopPropagation()}>
@@ -39,7 +41,7 @@ export default function Visor({ imagenes, titulo, inicial, alCerrar }) {
             {actual + 1} / {total}
           </span>
         )}
-        <button type="button" className="visor__cerrar" onClick={alCerrar} aria-label="Cerrar">
+        <button type="button" className="visor__cerrar" onClick={alCerrar} aria-label={t.galeria.cerrar}>
           ×
         </button>
       </div>
@@ -47,7 +49,7 @@ export default function Visor({ imagenes, titulo, inicial, alCerrar }) {
       <img
         className="visor__imagen"
         src={imagenes[actual]}
-        alt={`${titulo}: captura ${actual + 1} de ${total}`}
+        alt={t.galeria.captura(titulo, actual + 1, total)}
         onClick={(e) => e.stopPropagation()}
       />
 
@@ -60,7 +62,7 @@ export default function Visor({ imagenes, titulo, inicial, alCerrar }) {
               e.stopPropagation()
               ir(actual - 1)
             }}
-            aria-label="Captura anterior"
+            aria-label={t.galeria.anterior}
           >
             ‹
           </button>
@@ -71,7 +73,7 @@ export default function Visor({ imagenes, titulo, inicial, alCerrar }) {
               e.stopPropagation()
               ir(actual + 1)
             }}
-            aria-label="Captura siguiente"
+            aria-label={t.galeria.siguiente}
           >
             ›
           </button>

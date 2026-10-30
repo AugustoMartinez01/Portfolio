@@ -237,6 +237,42 @@ img {
   border-color: var(--celeste);
 }
 
+/* Selector de idioma ES / EN */
+.idioma {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 999px;
+  border: 1px solid rgba(156, 195, 240, 0.28);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.idioma button {
+  min-width: 36px;
+  padding: 4px 9px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #9fb4d3;
+  font: 600 0.75rem/1 var(--mono);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.idioma button:hover {
+  color: #fff;
+}
+
+.idioma button.activo {
+  background: var(--francia);
+  color: #fff;
+}
+
+.idioma button:focus-visible {
+  outline: 2px solid var(--celeste);
+  outline-offset: 2px;
+}
+
 /* ========== Hero ========== */
 .hero {
   position: relative;
@@ -1071,6 +1107,23 @@ a.panel__fila:hover {
     display: none;
   }
 
+  .nav {
+    gap: 10px;
+  }
+
+  .marca__nombre {
+    white-space: nowrap;
+  }
+
+  .idioma button {
+    min-width: 30px;
+    padding: 4px 7px;
+  }
+
+  .nav__boton {
+    padding: 7px 12px;
+  }
+
   .hero {
     padding: 64px 0 72px;
   }
@@ -1094,6 +1147,17 @@ a.panel__fila:hover {
 
   .proyecto__cuerpo {
     padding: 22px 20px 24px;
+  }
+}
+
+/* Celulares chicos: achica un poco el nombre para que entre el selector de idioma */
+@media (max-width: 380px) {
+  .marca {
+    gap: 8px;
+  }
+
+  .marca__nombre {
+    font-size: 0.9rem;
   }
 }
 
