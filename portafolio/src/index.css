@@ -387,10 +387,11 @@ img {
 
 /* Subrayado tipo resaltador debajo de "para usarse." */
 .hero__resaltado {
-  padding: 0 0.06em;
-  background: linear-gradient(transparent 64%, rgba(156, 195, 240, 0.5) 64%);
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  text-decoration: underline;
+  text-decoration-color: #9cc3f0;
+  text-decoration-thickness: 0.09em;
+  text-underline-offset: 0.16em;
+  text-decoration-skip-ink: none;
 }
 
 .hero__bajada {
