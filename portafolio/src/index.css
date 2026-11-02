@@ -521,12 +521,36 @@ img {
   border-top: 8px solid var(--c);
 }
 
+/* 01 Proyectos: mismo azul que 03 Sobre mí (las secciones quedan intercaladas) */
 .seccion--proyectos {
-  --c: var(--c-proyectos);
-  --c-marca: rgba(46, 123, 214, 0.28);
-  --c-etiqueta: #1d5fae;
-  --c-titulo: var(--marino-950);
-  background: var(--fondo);
+  --c: var(--c-sobre);
+  --c-marca: rgba(156, 195, 240, 0.45);
+  --c-etiqueta: #cfe3fa;
+  --c-titulo: #fff;
+  background: var(--francia);
+  color: #fff;
+}
+
+.seccion--proyectos .seccion__bajada {
+  color: #dbe7f7;
+}
+
+.seccion--proyectos .proyecto {
+  color: var(--texto);
+  border-color: transparent;
+  box-shadow: 0 14px 34px rgba(3, 12, 30, 0.35);
+}
+
+.seccion--proyectos .proyecto:hover {
+  box-shadow: 0 22px 46px rgba(3, 12, 30, 0.5);
+}
+
+.seccion--proyectos .filtro {
+  border-color: transparent;
+}
+
+.seccion--proyectos .filtro.activo {
+  background: var(--marino-950);
 }
 
 .seccion--servicios {
