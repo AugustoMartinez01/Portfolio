@@ -4,10 +4,11 @@ import { linkPublicado } from '../data/enlaces.js'
 import { useIdioma } from '../i18n.jsx'
 
 // Recibe el proyecto ya traducido al idioma elegido (ver Proyectos.jsx)
-export default function ProjectCard({ proyecto, numero }) {
+export default function ProjectCard({ proyecto }) {
   const { t } = useIdioma()
   const {
     id,
+    categoria,
     titulo,
     tipo,
     descripcion,
@@ -28,38 +29,36 @@ export default function ProjectCard({ proyecto, numero }) {
   const capturas = imagenes?.length ? imagenes : imagen ? [imagen] : []
 
   return (
-    <article className={`proyecto${link ? ' proyecto--link' : ''}`} id={id}>
+    <article className={`proyecto proyecto--${categoria}${link ? ' proyecto--link' : ''}`} id={id}>
       <div className="proyecto__imagen">
         {capturas.length ? (
           <Galeria imagenes={capturas} titulo={titulo} />
         ) : (
           <Ilustracion tipo={visual} />
         )}
-        <span className="proyecto__numero">{String(numero).padStart(2, '0')}</span>
+        <span className="proyecto__etiqueta">{tipo}</span>
       </div>
 
       <div className="proyecto__cuerpo">
         <div className="proyecto__meta">
-          <span className="proyecto__tipo">{tipo}</span>
+          <h3>
+            {link ? (
+              // Este link cubre toda la tarjeta (ver .proyecto__link-total en el CSS)
+              <a
+                href={link}
+                target="_blank"
+                rel="noreferrer"
+                className="proyecto__link-total"
+                aria-label={t.proyectos.abrir(titulo)}
+              >
+                {titulo}
+              </a>
+            ) : (
+              titulo
+            )}
+          </h3>
           <span className={`estado estado--${estado}`}>{t.estados[estado]}</span>
         </div>
-
-        <h3>
-          {link ? (
-            // Este link cubre toda la tarjeta (ver .proyecto__link-total en el CSS)
-            <a
-              href={link}
-              target="_blank"
-              rel="noreferrer"
-              className="proyecto__link-total"
-              aria-label={t.proyectos.abrir(titulo)}
-            >
-              {titulo}
-            </a>
-          ) : (
-            titulo
-          )}
-        </h3>
         <p className="proyecto__descripcion">{descripcion}</p>
 
         <ul className="proyecto__puntos">

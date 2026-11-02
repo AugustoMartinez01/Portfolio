@@ -22,3 +22,6 @@ export const herramientas = [
   'GitHub',
   'Vercel',
 ]
+
+// Tecnologías que se muestran en la franja de abajo del inicio
+export const stack = ['React', 'Vite', 'TypeScript', 'Next.js', 'Supabase', 'Electron', 'Vercel']

@@ -18,8 +18,10 @@ export default function Header() {
         </a>
 
         <nav className="nav" aria-label={t.header.secciones}>
-          <a href="#proyectos">{t.header.proyectos}</a>
-          <a href="#sobre-mi">{t.header.sobreMi}</a>
+          {/* Cada link lleva el color de su sección */}
+          <a href="#proyectos" className="nav__link nav__link--proyectos">{t.header.proyectos}</a>
+          <a href="#sobre-mi" className="nav__link nav__link--sobre">{t.header.sobreMi}</a>
+          <a href="#contacto" className="nav__link nav__link--contacto nav__boton">{t.header.contacto}</a>
 
           {/* Botón para cambiar de idioma */}
           <div className="idioma" role="group" aria-label={t.header.idioma}>
@@ -37,8 +39,6 @@ export default function Header() {
               </button>
             ))}
           </div>
-
-          <a href="#contacto" className="nav__boton">{t.header.contacto}</a>
         </nav>
       </div>
     </header>

@@ -8,6 +8,7 @@
 // imagen: ruta a una captura dentro de /public, por ejemplo '/capturas/agl.png'.
 // imagenes: lista de varias capturas; si la cargás, la tarjeta muestra flechas para pasarlas.
 //         Si la dejás en '', se muestra la ilustración de "visual".
+// categoria: 'cliente' | 'propio' | 'escritorio' (color de la tarjeta y filtros)
 // visual: 'web' | 'ranking' | 'finanzas' | 'escritorio'
 // en / fr: los mismos textos en inglés y en francés (titulo, tipo, descripcion, puntos, tecnologias, nota).
 //     Lo que no esté traducido se muestra igual que en español.
@@ -15,6 +16,7 @@
 export const proyectos = [
   {
     id: 'agendalo',
+    categoria: 'propio',
     titulo: 'Agendalo — Turnos online',
     tipo: 'Producto propio · SaaS',
     descripcion:
@@ -72,6 +74,7 @@ export const proyectos = [
   },
   {
     id: 'fradi-compresores',
+    categoria: 'cliente',
     titulo: 'Fradi Compresores',
     tipo: 'Web para cliente · en equipo',
     descripcion:
@@ -123,6 +126,7 @@ export const proyectos = [
   },
   {
     id: 'serafin-cerrajeria',
+    categoria: 'cliente',
     titulo: 'Serafín Cerrajería',
     tipo: 'Web para cliente',
     descripcion:
@@ -172,6 +176,7 @@ export const proyectos = [
   },
   {
     id: 'agl-detailing',
+    categoria: 'cliente',
     titulo: 'AGL Detailing',
     tipo: 'Web para cliente',
     descripcion:
@@ -230,6 +235,7 @@ export const proyectos = [
   },
   {
     id: 'soloq-leaderboard',
+    categoria: 'propio',
     titulo: 'SoloQ Challenge — Leaderboard',
     tipo: 'Proyecto propio',
     descripcion:
@@ -279,6 +285,7 @@ export const proyectos = [
   },
   {
     id: 'mis-gastos',
+    categoria: 'propio',
     titulo: 'Mis Gastos',
     tipo: 'Proyecto propio',
     descripcion:
@@ -337,6 +344,7 @@ export const proyectos = [
   },
   {
     id: 'escala-wisc4',
+    categoria: 'escritorio',
     titulo: 'Escala WISC-IV',
     tipo: 'Software de escritorio',
     descripcion:
