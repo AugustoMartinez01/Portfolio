@@ -1322,11 +1322,28 @@ img {
 
 .contacto__redes {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
 }
 
 .contacto__redes .boton {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
+  padding-left: 14px;
+  padding-right: 14px;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .contacto__redes {
+    gap: 8px;
+  }
+
+  .contacto__redes .boton {
+    padding: 12px 8px;
+    gap: 6px;
+    font-size: 0.875rem;
+  }
 }
 
 /* ========== WhatsApp ========== */
@@ -1527,4 +1544,9 @@ img {
   * {
     transition: none !important;
   }
+}
+
+/* Íconos de redes en los botones de contacto */
+.red__icono {
+  flex-shrink: 0;
 }
