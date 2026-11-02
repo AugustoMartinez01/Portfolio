@@ -385,15 +385,12 @@ img {
   color: #4f8ff7;
 }
 
-/* Recuadro celeste: con el ancho justo de las palabras */
+/* Subrayado tipo resaltador debajo de "para usarse." */
 .hero__resaltado {
-  display: inline-block;
-  white-space: nowrap;
-  padding: 0 0.22em;
-  border-radius: 12px;
-  background: var(--c-sobre);
-  color: var(--marino-950);
-  line-height: 1.15;
+  padding: 0 0.06em;
+  background: linear-gradient(transparent 64%, rgba(156, 195, 240, 0.5) 64%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .hero__bajada {
@@ -1440,13 +1437,6 @@ img {
 
   .hero {
     padding: 56px 0 0;
-  }
-
-  .hero__resaltado {
-    display: inline;
-    white-space: normal;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
   }
 
   .dato {
