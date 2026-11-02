@@ -56,6 +56,11 @@ export default function Contacto() {
                 LinkedIn ↗
               </a>
             )}
+            {perfil.instagram && (
+              <a href={perfil.instagram} target="_blank" rel="noreferrer" className="boton boton--contorno">
+                Instagram ↗
+              </a>
+            )}
           </div>
         </div>
       </div>

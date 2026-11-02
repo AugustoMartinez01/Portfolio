@@ -1,0 +1,63 @@
+USUARIO SUGERIDO: @tukodes   (si está ocupado: @tukodes.dev o @tukodes_ar)
+NOMBRE: Tuko · Desarrollo web
+
+BIO:
+💻 Páginas web y apps para negocios
+📍 Tucumán, Argentina
+🛒 Catálogos · Turnos online · Mercado Pago
+💬 Escribime por DM o WhatsApp
+LINK: https://tukodes.com.ar
+
+------------------------------------------------------------
+Subir en este orden (el último que subas queda arriba de todo):
+07, 06, 05, 04, 03, 02, 01 y al final 00 (la presentación).
+------------------------------------------------------------
+
+[07-servicios]
+¿Ya tenés página web y le falta algo? No hace falta hacerla de nuevo. 🔧
+También hago trabajos puntuales: cobros con Mercado Pago, base de datos con usuarios, pedidos por WhatsApp, panel para cargar tus productos, turnos online y dominio .com.ar.
+Escribime por DM y te digo cómo lo resolvemos y cuánto lleva.
+#desarrolloweb #tucuman #mercadopago #paginasweb #emprendedorestucuman
+
+[06-wisc]
+Escala WISC-IV 🧠
+Programa de escritorio para corregir el WISC-IV con baremo argentino. Calcula los puntajes solo y arma el informe en Word o PDF, para que el profesional ahorre tiempo y no se equivoque en las cuentas.
+En desarrollo.
+#software #psicologia #wisc #desarrollo #tucuman
+
+[05-mis-gastos]
+Mis Gastos 💸
+App para anotar gastos e ingresos y ver en qué se va la plata, separada por categorías. Cada uno tiene su cuenta y se puede instalar en el celular como una app.
+Proyecto propio, en desarrollo.
+#app #finanzaspersonales #nextjs #supabase #desarrolloweb
+
+[04-agl]
+AGL Detailing 🚗✨
+Página para un negocio de detailing automotor. El diseño sigue la misma identidad que sus flyers, así la marca se ve igual en la calle y en internet. Servicios, packs y turnos por WhatsApp.
+En desarrollo.
+#detailing #paginaweb #tucuman #diseñoweb #react
+
+[03-serafin]
+Serafín Cerrajería 🔑
+Tienda online para una cerrajería de Tucumán: catálogo con filtros, carrito que arma el pedido para WhatsApp, presupuesto de cerrajería móvil y pago con Mercado Pago.
+En desarrollo.
+#cerrajeria #tiendaonline #mercadopago #tucuman #desarrolloweb
+
+[02-fradi]
+Fradi Compresores 🏭
+Web para un comercio de Tucumán con más de 65 años en compresores de aire: catálogo con fichas técnicas y consulta por WhatsApp desde cada producto. Lo hice en equipo con Lucas Saucedo.
+👉 fradicompresores.com.ar
+#tucuman #paginaweb #nextjs #compresores #desarrolloweb
+
+[01-agendalo]
+Agendalo 📅
+Mi sistema de turnos online para negocios. Cada negocio tiene su propia página de reservas con su logo y colores, una agenda para manejar los turnos y avisos por WhatsApp. Ideal para peluquerías, barberías, estética, consultorios y más.
+¿Te interesa para tu negocio? Escribime por DM.
+#turnosonline #agenda #emprendedores #tucuman #saas
+
+[00-intro]
+¡Hola! Soy Augusto, pero me dicen Tuko 👋
+Hago páginas web y apps para negocios de Tucumán: catálogos, turnos online, pedidos por WhatsApp y cobros con Mercado Pago.
+Acá vas a ver los proyectos que voy haciendo. Si tenés un negocio y querés tu web, escribime por DM.
+🌐 tukodes.com.ar
+#desarrolloweb #tucuman #paginasweb #programador #emprendedores
