@@ -20,6 +20,7 @@ export default function Header() {
         <nav className="nav" aria-label={t.header.secciones}>
           {/* Cada link lleva el color de su sección */}
           <a href="#proyectos" className="nav__link nav__link--proyectos">{t.header.proyectos}</a>
+          <a href="#servicios" className="nav__link nav__link--servicios">{t.header.servicios}</a>
           <a href="#sobre-mi" className="nav__link nav__link--sobre">{t.header.sobreMi}</a>
           <a href="#contacto" className="nav__link nav__link--contacto nav__boton">{t.header.contacto}</a>
 

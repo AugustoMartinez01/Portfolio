@@ -10,7 +10,7 @@ export default function SobreMi() {
       <div className="contenedor sobre">
         <div className="sobre__texto">
           <TituloSeccion
-            numero="02"
+            numero="03"
             etiqueta={t.sobreMi.etiqueta}
             titulo={t.sobreMi.titulo}
             marcado={t.sobreMi.tituloMarcado}

@@ -12,6 +12,7 @@ export const textos = {
       irInicio: 'Ir al inicio',
       secciones: 'Secciones',
       proyectos: 'Proyectos',
+      servicios: "Servicios",
       sobreMi: 'Sobre mí',
       contacto: 'Contacto',
       idioma: 'Idioma de la página',
@@ -59,6 +60,26 @@ export const textos = {
       cerrar: 'Cerrar',
     },
 
+    servicios: {
+      etiqueta: "Servicios",
+      titulo: "¿Necesitás solo",
+      tituloMarcado: "una parte?",
+      bajada: "No hace falta una web entera. También hago trabajos puntuales para sumarle a lo que ya tenés: cobrar online, guardar tus datos, recibir pedidos por WhatsApp y más.",
+      loHiceEn: "Lo hice en:",
+      cierreTitulo: "¿Tenés una web y le falta algo?",
+      cierreTexto: "Contame qué necesitás y te digo cómo lo resolvemos y cuánto lleva.",
+      cierreBoton: "Consultame por WhatsApp",
+      mensajeWhatsApp: "Hola Augusto, vi tu portafolio y quería consultarte por un trabajo puntual para mi web.",
+      lista: [
+        { titulo: "Cobros con Mercado Pago", texto: "Botón de pago en tu web y aviso automático cuando el pago se acredita, para que no tengas que revisar a mano." },
+        { titulo: "Base de datos y usuarios", texto: "Tus datos guardados en Supabase, con inicio de sesión y reglas para que cada usuario vea solo lo suyo." },
+        { titulo: "Pedidos por WhatsApp", texto: "El cliente arma el pedido o la consulta en la web y te llega al WhatsApp con el mensaje ya escrito." },
+        { titulo: "Panel para cargar productos", texto: "Subís fotos, precios y descripciones desde el celular, sin tocar código y sin depender de nadie." },
+        { titulo: "Turnos y reservas online", texto: "Agenda con horarios libres, reservas desde el celular y avisos para que no se pise ningún turno." },
+        { titulo: "Dominio y puesta en línea", texto: "Registro del .com.ar, publicación de la web con HTTPS y una vista previa linda al compartir el link." },
+      ],
+    },
+
     sobreMi: {
       etiqueta: 'Sobre mí',
       titulo: 'Aprendo',
@@ -96,6 +117,7 @@ export const textos = {
       irInicio: 'Go to top',
       secciones: 'Sections',
       proyectos: 'Projects',
+      servicios: "Services",
       sobreMi: 'About',
       contacto: 'Contact',
       idioma: 'Page language',
@@ -143,6 +165,26 @@ export const textos = {
       cerrar: 'Close',
     },
 
+    servicios: {
+      etiqueta: "Services",
+      titulo: "Need just",
+      tituloMarcado: "one piece?",
+      bajada: "You don't need a whole new website. I also take on smaller jobs to add to what you already have: online payments, storing your data, getting orders through WhatsApp and more.",
+      loHiceEn: "Built in:",
+      cierreTitulo: "Already have a site that's missing something?",
+      cierreTexto: "Tell me what you need and I'll explain how we can solve it and how long it takes.",
+      cierreBoton: "Ask me on WhatsApp",
+      mensajeWhatsApp: "Hi Augusto, I saw your portfolio and wanted to ask you about a small job for my website.",
+      lista: [
+        { titulo: "Payments with Mercado Pago", texto: "A pay button on your site and an automatic notice when the payment goes through, so you don't have to check by hand." },
+        { titulo: "Database and user accounts", texto: "Your data stored in Supabase, with login and rules so each user only sees their own information." },
+        { titulo: "Orders through WhatsApp", texto: "Customers put together their order or question on the site and it reaches your WhatsApp with the message already written." },
+        { titulo: "Panel to manage products", texto: "Upload photos, prices and descriptions from your phone, without touching code or depending on anyone." },
+        { titulo: "Online bookings", texto: "A schedule with free time slots, bookings from the phone and notifications so no appointments overlap." },
+        { titulo: "Domain and going live", texto: "Registering your .com.ar, publishing the site with HTTPS and a nice preview when the link is shared." },
+      ],
+    },
+
     sobreMi: {
       etiqueta: 'About me',
       titulo: 'I learn by',
@@ -179,6 +221,7 @@ export const textos = {
       irInicio: 'Retour en haut',
       secciones: 'Sections',
       proyectos: 'Projets',
+      servicios: "Services",
       sobreMi: 'À propos',
       contacto: 'Contact',
       idioma: 'Langue de la page',
@@ -224,6 +267,26 @@ export const textos = {
       irA: (n) => `Voir la capture ${n}`,
       visor: (titulo) => `Captures de ${titulo}`,
       cerrar: 'Fermer',
+    },
+
+    servicios: {
+      etiqueta: "Services",
+      titulo: "Besoin d'une",
+      tituloMarcado: "seule partie ?",
+      bajada: "Pas besoin d'un site complet. Je réalise aussi des missions ponctuelles pour compléter ce que vous avez déjà : paiements en ligne, stockage de vos données, commandes par WhatsApp et plus encore.",
+      loHiceEn: "Réalisé pour :",
+      cierreTitulo: "Votre site a besoin de quelque chose en plus ?",
+      cierreTexto: "Dites-moi ce dont vous avez besoin et je vous explique comment le faire et en combien de temps.",
+      cierreBoton: "Me contacter sur WhatsApp",
+      mensajeWhatsApp: "Bonjour Augusto, j'ai vu votre portfolio et j'aimerais vous parler d'une mission ponctuelle pour mon site.",
+      lista: [
+        { titulo: "Paiements avec Mercado Pago", texto: "Un bouton de paiement sur votre site et une notification automatique quand le paiement est validé, sans rien vérifier à la main." },
+        { titulo: "Base de données et comptes utilisateurs", texto: "Vos données enregistrées dans Supabase, avec connexion et règles pour que chaque utilisateur ne voie que les siennes." },
+        { titulo: "Commandes par WhatsApp", texto: "Le client prépare sa commande ou sa question sur le site et elle arrive sur votre WhatsApp avec le message déjà rédigé." },
+        { titulo: "Panneau pour gérer les produits", texto: "Vous ajoutez photos, prix et descriptions depuis votre téléphone, sans toucher au code et sans dépendre de personne." },
+        { titulo: "Réservations en ligne", texto: "Un agenda avec les créneaux libres, des réservations depuis le téléphone et des notifications pour éviter les rendez-vous qui se chevauchent." },
+        { titulo: "Nom de domaine et mise en ligne", texto: "Enregistrement du .com.ar, publication du site en HTTPS et un bel aperçu quand le lien est partagé." },
+      ],
     },
 
     sobreMi: {

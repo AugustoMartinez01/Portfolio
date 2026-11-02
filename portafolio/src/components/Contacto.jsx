@@ -17,7 +17,7 @@ export default function Contacto() {
     <section className="seccion seccion--contacto" id="contacto">
       <div className="contenedor contacto__fila">
         <TituloSeccion
-          numero="03"
+          numero="04"
           etiqueta={t.contacto.etiqueta}
           titulo={t.contacto.titulo}
           marcado={t.contacto.tituloMarcado}

@@ -13,6 +13,7 @@
 
   /* Color de cada sección (menú, número grande y franja de arriba) */
   --c-proyectos: #2e7bd6;
+  --c-servicios: #6d7cff;
   --c-sobre: #9cc3f0;
   --c-contacto: #3ccf91;
 
@@ -252,6 +253,11 @@ img {
 .nav__link--proyectos {
   --c: var(--c-proyectos);
   background: rgba(46, 123, 214, 0.16);
+}
+
+.nav__link--servicios {
+  --c: var(--c-servicios);
+  background: rgba(109, 124, 255, 0.16);
 }
 
 .nav__link--sobre {
@@ -515,6 +521,14 @@ img {
   --c-etiqueta: #1d5fae;
   --c-titulo: var(--marino-950);
   background: var(--fondo);
+}
+
+.seccion--servicios {
+  --c: var(--c-servicios);
+  --c-marca: rgba(109, 124, 255, 0.28);
+  --c-etiqueta: #4b4fc4;
+  --c-titulo: var(--marino-950);
+  background: #fff;
 }
 
 .seccion--sobre {
@@ -1091,6 +1105,94 @@ img {
   color: var(--texto-suave);
 }
 
+/* ========== Servicios ========== */
+.servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
+  gap: 20px;
+  margin-top: 48px;
+}
+
+.servicio {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
+  border-radius: 20px;
+  background: var(--fondo);
+  border: 1px solid var(--linea);
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.servicio:hover {
+  transform: translateY(-3px);
+  border-color: var(--c-servicios);
+  box-shadow: var(--sombra);
+}
+
+.servicio--azul { --fondo-icono: #e3edfb; --tinta-icono: #0055a4; }
+.servicio--indigo { --fondo-icono: #e8eaff; --tinta-icono: #4b4fc4; }
+.servicio--verde { --fondo-icono: #ddf6ea; --tinta-icono: #11764b; }
+
+.servicio__icono {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--fondo-icono);
+  color: var(--tinta-icono);
+}
+
+.servicio h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--marino-950);
+}
+
+.servicio__texto {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--texto-suave);
+}
+
+.servicio__prueba {
+  padding-top: 14px;
+  border-top: 1px solid var(--linea);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: #1d5fae;
+}
+
+.servicio__prueba strong {
+  color: var(--marino-950);
+}
+
+/* Recuadro final con el botón de WhatsApp */
+.servicios__cierre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 28px;
+  padding: 28px 32px;
+  border-radius: 20px;
+  background: var(--marino-950);
+  color: #fff;
+}
+
+.servicios__cierre-titulo {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.servicios__cierre-texto {
+  margin-top: 6px;
+  color: #c9d8ee;
+}
+
 /* ========== Sobre mí ========== */
 .sobre {
   display: grid;
@@ -1252,6 +1354,13 @@ img {
 }
 
 /* ========== Responsive ========== */
+/* En pantallas medianas el menú no entra entero: se oculta Servicios */
+@media (max-width: 1000px) {
+  .nav__link--servicios {
+    display: none;
+  }
+}
+
 @media (max-width: 920px) {
   .hero__grilla,
   .sobre {
@@ -1335,6 +1444,18 @@ img {
 
   .proyecto__cuerpo {
     padding: 22px 20px 24px;
+  }
+
+  .servicio {
+    padding: 22px;
+  }
+
+  .servicios__cierre {
+    padding: 24px 20px;
+  }
+
+  .servicios__cierre .boton {
+    width: 100%;
   }
 }
 
