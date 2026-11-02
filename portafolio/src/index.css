@@ -537,7 +537,6 @@ img {
 
 .seccion--proyectos .proyecto {
   color: var(--texto);
-  border-color: transparent;
   box-shadow: 0 14px 34px rgba(3, 12, 30, 0.35);
 }
 
@@ -710,7 +709,7 @@ img {
   display: flex;
   flex-direction: column;
   background: var(--tarjeta);
-  border: 1px solid var(--linea);
+  border: 2px solid var(--negro);
   border-top: 6px solid var(--cat, var(--francia));
   border-radius: 20px;
   overflow: hidden;
@@ -747,7 +746,7 @@ img {
 }
 
 .proyecto--link:hover {
-  border-color: var(--francia-claro);
+  border-color: var(--negro);
   border-top-color: var(--cat, var(--francia));
 }
 
@@ -1158,6 +1157,7 @@ img {
   padding: 28px;
   border-radius: 20px;
   background: #fff;
+  border: 2px solid var(--negro);
   border-top: 6px solid var(--borde-servicio);
   transition: transform 0.25s, box-shadow 0.25s;
 }
