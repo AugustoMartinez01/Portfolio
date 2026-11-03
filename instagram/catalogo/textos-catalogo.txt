@@ -1,0 +1,34 @@
+CATÁLOGO WHATSAPP BUSINESS — tukodes
+(Para cada artículo: imagen + nombre + descripción. Precio: vacío. País de origen: Argentina. Enlace: https://tukodes.com.ar)
+
+1) 00-web.jpg
+Nombre: Página web para tu negocio
+Descripción: Diseño a medida para tu negocio: se ve bien en celular y compu, con consultas por WhatsApp y tu propio dominio. Escribime y te paso presupuesto.
+
+2) 01-mercado-pago.jpg
+Nombre: Cobros con Mercado Pago
+Descripción: Botón de pago en tu web y aviso automático cuando el pago se acredita, para que no tengas que revisar a mano.
+
+3) 02-base-de-datos.jpg
+Nombre: Base de datos y usuarios
+Descripción: Tus datos guardados en la nube, con inicio de sesión y reglas para que cada usuario vea solo lo suyo.
+
+4) 03-whatsapp.jpg
+Nombre: Pedidos por WhatsApp
+Descripción: El cliente arma el pedido o la consulta en tu web y te llega al WhatsApp con el mensaje ya escrito.
+
+5) 04-panel.jpg
+Nombre: Panel para cargar productos
+Descripción: Subís fotos, precios y descripciones desde el celular, sin tocar código y sin depender de nadie.
+
+6) 05-turnos.jpg
+Nombre: Turnos y reservas online
+Descripción: Agenda con horarios libres, reservas desde el celular y avisos para que no se pise ningún turno.
+
+7) 06-dominio.jpg
+Nombre: Dominio y puesta en línea
+Descripción: Registro de tu .com.ar, la web publicada con HTTPS y una vista previa linda al compartir el link.
+
+PERFIL DE EMPRESA (desde el celular)
+Nombre: tukodes
+Categoría: Servicios informáticos (o "Desarrollo web" si aparece)
