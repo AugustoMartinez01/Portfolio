@@ -130,16 +130,17 @@ export const proyectos = [
     titulo: 'Serafín Cerrajería',
     tipo: 'Web para cliente',
     descripcion:
-      'Sitio web con tienda para una cerrajería de Tucumán. Usa la identidad de la tarjeta del negocio y permite elegir cerraduras, armar el pedido y pedir presupuesto de cerrajería móvil, todo con cierre por WhatsApp.',
+      'Sitio web con tienda para una cerrajería de Tucumán, ya publicado con su propio dominio .com.ar. Usa la identidad de la tarjeta del negocio y permite elegir cerraduras, armar el pedido y pedir presupuesto de cerrajería móvil, todo con cierre por WhatsApp.',
     puntos: [
       'Catálogo con fotos, filtros por marca y tipo, y guía para elegir',
       'Carrito con copias de llaves y colocación, que arma el pedido para WhatsApp',
       'Presupuesto de cerrajería móvil en 3 pasos, con ubicación por GPS',
       'Panel para que el dueño cargue y edite artículos, y pago con Mercado Pago',
+      'Dominio propio cerrajeriaserafin.com.ar, publicado en Vercel con HTTPS',
     ],
-    tecnologias: ['React', 'Vite', 'Supabase', 'Mercado Pago'],
-    estado: 'en-desarrollo',
-    demo: '',
+    tecnologias: ['React', 'Vite', 'Supabase', 'Mercado Pago', 'Vercel'],
+    estado: 'en-linea',
+    demo: 'https://cerrajeriaserafin.com.ar/',
     codigo: '',
     nota: '',
     imagen: '',
@@ -154,23 +155,25 @@ export const proyectos = [
     // Textos en inglés (si falta alguno, se usa el de español)
     en: {
       tipo: 'Client website',
-      descripcion: 'Website with an online store for a locksmith in Tucumán. It uses the brand identity from the business card and lets customers choose locks, build their order and request a mobile locksmith quote, all wrapped up through WhatsApp.',
+      descripcion: 'Website with an online store for a locksmith in Tucumán, now live on its own .com.ar domain. It uses the brand identity from the business card and lets customers choose locks, build their order and request a mobile locksmith quote, all wrapped up through WhatsApp.',
       puntos: [
         'Catalog with photos, filters by brand and type, and a buying guide',
         'Cart with key copies and installation that builds the order for WhatsApp',
         '3-step mobile locksmith quote with GPS location',
         'Dashboard for the owner to add and edit products, plus Mercado Pago payments',
+        'Own domain cerrajeriaserafin.com.ar, deployed on Vercel with HTTPS',
       ],
     },
     // Textos en francés
     fr: {
       tipo: 'Site pour un client',
-      descripcion: 'Site web avec boutique en ligne pour une serrurerie de Tucumán. Il reprend l\'identité de la carte de visite du commerce et permet de choisir des serrures, de préparer sa commande et de demander un devis de serrurerie à domicile, le tout finalisé par WhatsApp.',
+      descripcion: 'Site web avec boutique en ligne pour une serrurerie de Tucumán, déjà en ligne avec son propre domaine .com.ar. Il reprend l\'identité de la carte de visite du commerce et permet de choisir des serrures, de préparer sa commande et de demander un devis de serrurerie à domicile, le tout finalisé par WhatsApp.',
       puntos: [
         'Catalogue avec photos, filtres par marque et par type, et guide pour bien choisir',
         'Panier avec doubles de clés et pose, qui prépare la commande pour WhatsApp',
         'Devis de serrurerie à domicile en 3 étapes, avec localisation GPS',
         'Panneau pour que le propriétaire ajoute et modifie ses articles, et paiement avec Mercado Pago',
+        'Domaine propre cerrajeriaserafin.com.ar, publié sur Vercel avec HTTPS',
       ],
     },
   },
