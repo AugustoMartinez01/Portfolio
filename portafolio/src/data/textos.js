@@ -46,6 +46,7 @@ export const textos = {
       tecnologias: 'Tecnologías',
       abrir: (titulo) => `${titulo}: abrir el proyecto publicado`,
       verEnVivo: 'Ver proyecto en vivo ↗',
+      verAvance: 'Ver el avance ↗',
       codigo: 'Código en GitHub ↗',
     },
 
@@ -151,6 +152,7 @@ export const textos = {
       tecnologias: 'Technologies',
       abrir: (titulo) => `${titulo}: open the live project`,
       verEnVivo: 'View live project ↗',
+      verAvance: 'See the progress ↗',
       codigo: 'Code on GitHub ↗',
     },
 
@@ -255,6 +257,7 @@ export const textos = {
       tecnologias: 'Technologies',
       abrir: (titulo) => `${titulo} : ouvrir le projet en ligne`,
       verEnVivo: 'Voir le projet en ligne ↗',
+      verAvance: 'Voir l\'avancement ↗',
       codigo: 'Code sur GitHub ↗',
     },
 

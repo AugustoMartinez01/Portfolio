@@ -75,7 +75,9 @@ export default function ProjectCard({ proyecto }) {
 
         {link ? (
           <div className="proyecto__pie">
-            <span className="boton boton--chico">{t.proyectos.verEnVivo}</span>
+            <span className="boton boton--chico">
+              {estado === 'en-linea' ? t.proyectos.verEnVivo : t.proyectos.verAvance}
+            </span>
           </div>
         ) : (
           (codigo || nota) && (

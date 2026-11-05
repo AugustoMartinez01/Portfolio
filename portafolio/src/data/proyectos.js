@@ -2,8 +2,8 @@
 //
 // estado:  'en-linea'  → puntito verde, "En línea"
 //          'en-desarrollo' → puntito azul, "En desarrollo"
-// demo: link a donde está publicado. Solo los proyectos 'en-linea' con demo
-//       son clickeables (la tarjeta entera abre ese link).
+// demo: link a donde está publicado. Si tiene link, la tarjeta entera lo abre.
+//       'en-linea' → botón "Ver proyecto en vivo" · 'en-desarrollo' → botón "Ver el avance".
 // codigo: link al repositorio. Dejalos en '' si no hay (el botón no aparece).
 // imagen: ruta a una captura dentro de /public, por ejemplo '/capturas/agl.png'.
 // imagenes: lista de varias capturas; si la cargás, la tarjeta muestra flechas para pasarlas.
@@ -29,7 +29,7 @@ export const proyectos = [
       'La base de datos impide turnos superpuestos y cada negocio solo ve sus datos',
     ],
     tecnologias: ['React', 'Vite', 'Supabase', 'PostgreSQL', 'Row Level Security', 'Vercel'],
-    estado: 'en-linea',
+    estado: 'en-desarrollo',
     demo: 'https://agendalo-alpha.vercel.app/',
     codigo: '',
     nota: 'Producto comercial · código privado',
