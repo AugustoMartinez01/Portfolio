@@ -34,6 +34,8 @@ export const textos = {
       stack: 'Tecnologías que uso',
       panel: 'Proyectos en marcha',
       panelTitulo: 'Ahora mismo',
+      estrellaTitulo: 'Proyecto estrella:',
+      estrellaTexto: 'web + sistema de gestión conectados, funcionando en una cerrajería real.',
     },
 
     proyectos: {
@@ -62,7 +64,7 @@ export const textos = {
     },
 
     destacado: {
-      etiqueta: 'Proyecto destacado · Trabajo para cliente',
+      etiqueta: 'Proyecto estrella · Trabajo para cliente',
       titulo: 'Página web + sistema de gestión',
       tituloMarcado: 'para cerrajerías',
       bajada:
@@ -94,6 +96,7 @@ export const textos = {
         boton: 'Ver capturas ↓',
       },
       conexionTitulo: 'Cómo se conectan',
+      union: 'Sincronizados',
       conexion: [
         { titulo: 'Productos y precios', texto: 'Se cargan una sola vez en el sistema y la web los muestra actualizados.' },
         { titulo: 'Stock compartido', texto: 'Lo que se vende en el local y lo que se pide online sale del mismo stock.' },
@@ -195,6 +198,8 @@ export const textos = {
       stack: 'Technologies I use',
       panel: 'Ongoing projects',
       panelTitulo: 'Right now',
+      estrellaTitulo: 'Flagship project:',
+      estrellaTexto: 'website + management system, connected and running in a real locksmith shop.',
     },
 
     proyectos: {
@@ -223,7 +228,7 @@ export const textos = {
     },
 
     destacado: {
-      etiqueta: 'Featured project · Client work',
+      etiqueta: 'Flagship project · Client work',
       titulo: 'Website + management system',
       tituloMarcado: 'for locksmiths',
       bajada:
@@ -255,6 +260,7 @@ export const textos = {
         boton: 'See screenshots ↓',
       },
       conexionTitulo: 'How they connect',
+      union: 'In sync',
       conexion: [
         { titulo: 'Products and prices', texto: 'Entered once in the system, and the website shows them up to date.' },
         { titulo: 'Shared stock', texto: 'In-store sales and online orders come from the same stock.' },
@@ -355,6 +361,8 @@ export const textos = {
       stack: "Technologies que j'utilise",
       panel: 'Projets en cours',
       panelTitulo: 'En ce moment',
+      estrellaTitulo: 'Projet phare :',
+      estrellaTexto: 'site web + logiciel de gestion connectés, en service dans une vraie serrurerie.',
     },
 
     proyectos: {
@@ -415,6 +423,7 @@ export const textos = {
         boton: 'Voir les captures ↓',
       },
       conexionTitulo: 'Comment ils se connectent',
+      union: 'Synchronisés',
       conexion: [
         { titulo: 'Produits et prix', texto: 'Saisis une seule fois dans le logiciel, le site les affiche à jour.' },
         { titulo: 'Stock partagé', texto: 'Les ventes en magasin et les commandes en ligne sortent du même stock.' },

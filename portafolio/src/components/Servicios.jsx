@@ -2,10 +2,12 @@ import { servicios } from '../data/servicios.js'
 import TituloSeccion from './TituloSeccion.jsx'
 import { linkWhatsApp, IconoWhatsApp } from './WhatsApp.jsx'
 import { useIdioma } from '../i18n.jsx'
+import { useAparecer } from '../animaciones.jsx'
 
 // Trabajos puntuales: integraciones y partes sueltas que se pueden sumar a una web existente.
 export default function Servicios() {
   const { t } = useIdioma()
+  const refLista = useAparecer()
 
   return (
     <section className="seccion seccion--servicios" id="servicios">
@@ -19,7 +21,7 @@ export default function Servicios() {
           <p className="seccion__bajada">{t.servicios.bajada}</p>
         </TituloSeccion>
 
-        <ul className="servicios">
+        <ul className="servicios" ref={refLista}>
           {servicios.map((s, i) => (
             <li key={s.id} className={`servicio servicio--${s.tono}`}>
               <span className="servicio__icono" aria-hidden="true">

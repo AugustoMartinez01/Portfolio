@@ -1,6 +1,7 @@
 import Galeria from './Galeria.jsx'
 import { linkWhatsApp, IconoWhatsApp } from './WhatsApp.jsx'
 import { useIdioma } from '../i18n.jsx'
+import { useAparecer, moverBrillo } from '../animaciones.jsx'
 
 // Proyecto destacado: la web de Serafín y el sistema de gestión, uno al lado del otro,
 // con cómo se conectan, las tecnologías y lo que incluye la implementación.
@@ -68,7 +69,7 @@ function Icono({ d, tamano = 22 }) {
 
 function Panel({ tipo, datos, textos, capturas, children }) {
   return (
-    <article className={`caso__panel caso__panel--${tipo}`}>
+    <article className={`caso__panel brillo caso__panel--${tipo}`} onMouseMove={moverBrillo}>
       <div className="caso__panel-imagen">
         <Galeria imagenes={capturas} titulo={textos.titulo} />
       </div>
@@ -95,9 +96,11 @@ function Panel({ tipo, datos, textos, capturas, children }) {
 export default function CasoDestacado() {
   const { t } = useIdioma()
   const d = t.destacado
+  const refCaso = useAparecer()
+  const refConexion = useAparecer()
 
   return (
-    <div className="caso" id="destacado">
+    <div className="caso" id="destacado" ref={refCaso}>
       <div className="caso__cabecera">
         <p className="caso__etiqueta">
           <span aria-hidden="true">★</span> {d.etiqueta}
@@ -115,8 +118,15 @@ export default function CasoDestacado() {
           </a>
         </Panel>
 
+        {/* Unión animada: los datos van y vienen entre la web y el sistema */}
         <div className="caso__union" aria-hidden="true">
-          <span>⇄</span>
+          <span className="caso__union-linea">
+            <i />
+            <i />
+            <i />
+          </span>
+          <span className="caso__union-icono">⇄</span>
+          <span className="caso__union-texto">{d.union}</span>
         </div>
 
         <Panel tipo="sistema" textos={d.sistema} capturas={SISTEMA.capturas}>
@@ -126,7 +136,7 @@ export default function CasoDestacado() {
         </Panel>
       </div>
 
-      <div className="caso__conexion">
+      <div className="caso__conexion" ref={refConexion}>
         <h4>{d.conexionTitulo}</h4>
         <ol>
           {d.conexion.map((c, i) => (

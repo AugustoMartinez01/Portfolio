@@ -1721,7 +1721,9 @@ img {
   place-items: center;
 }
 
-.caso__union span {
+.caso__union-icono {
+  position: relative;
+  z-index: 1;
   display: grid;
   place-items: center;
   width: 54px;
@@ -1856,7 +1858,7 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .caso__union span {
+  .caso__union-icono {
     transform: rotate(90deg);
   }
 
@@ -1886,5 +1888,381 @@ img {
 
   .caso__cierre .boton {
     width: 100%;
+  }
+}
+
+/* ==========================================================
+   Animaciones livianas (ver src/animaciones.jsx)
+   Todo es CSS: no hay librerías extra. Si la persona tiene activado
+   "reducir movimiento" en su sistema, se muestra todo quieto.
+   ========================================================== */
+
+/* --- Aparecer al hacer scroll (la clase .aparecer la pone el JS) --- */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    translate: 0 24px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.aparecer:not(.visible) {
+  opacity: 0;
+}
+
+.aparecer.visible {
+  animation: aparecer 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* --- Brillo que sigue al mouse (tarjetas de proyectos y paneles del destacado) --- */
+.brillo {
+  position: relative;
+  isolation: isolate;
+}
+
+@media (hover: hover) {
+  .brillo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    border-radius: inherit;
+    background: radial-gradient(
+      420px circle at var(--mx, 50%) var(--my, 50%),
+      rgba(46, 123, 214, 0.16),
+      transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .brillo:hover::before {
+    opacity: 1;
+  }
+}
+
+/* --- Hero: líneas de luz sobre la grilla --- */
+.hero__lineas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, #000 55%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
+}
+
+.hero__linea {
+  fill: none;
+  stroke-linecap: round;
+  animation: linea-correr linear infinite;
+}
+
+.hero__linea--1 {
+  stroke: #2e7bd6;
+  stroke-opacity: 0.5;
+  stroke-width: 1.5;
+  stroke-dasharray: 180 520;
+  animation-duration: 10s;
+}
+
+.hero__linea--2 {
+  stroke: #9cc3f0;
+  stroke-opacity: 0.32;
+  stroke-width: 1;
+  stroke-dasharray: 120 600;
+  animation-duration: 14s;
+}
+
+.hero__linea--3 {
+  stroke: #3ccf91;
+  stroke-opacity: 0.28;
+  stroke-width: 1.5;
+  stroke-dasharray: 220 480;
+  animation-duration: 17s;
+}
+
+@keyframes linea-correr {
+  to {
+    stroke-dashoffset: -1400;
+  }
+}
+
+/* --- Hero: acceso al proyecto estrella --- */
+.hero__estrella {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+  max-width: 560px;
+  padding: 10px 16px 10px 10px;
+  border-radius: 14px;
+  background: rgba(60, 207, 145, 0.08);
+  border: 1px solid rgba(60, 207, 145, 0.38);
+  color: #dbe7f7;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.hero__estrella strong {
+  color: #fff;
+}
+
+.hero__estrella-icono {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--verde);
+  color: var(--marino-950);
+  font-size: 1rem;
+}
+
+.hero__estrella-flecha {
+  flex-shrink: 0;
+  color: var(--verde);
+  font-weight: 800;
+  transition: translate 0.2s;
+}
+
+.hero__estrella:hover {
+  background: rgba(60, 207, 145, 0.16);
+  border-color: var(--verde);
+}
+
+.hero__estrella:hover .hero__estrella-flecha {
+  translate: 4px 0;
+}
+
+/* --- Hero: cinta de tecnologías que se desplaza --- */
+.hero__stack {
+  display: block;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.hero__stack-pista {
+  display: flex;
+  width: max-content;
+  animation: cinta 40s linear infinite;
+}
+
+/* margen en vez de gap: así la vuelta de la cinta no da un saltito */
+.hero__stack-pista li {
+  flex-shrink: 0;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.hero__stack:hover .hero__stack-pista {
+  animation-play-state: paused;
+}
+
+@keyframes cinta {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* --- Proyecto estrella: más presencia y conexión animada --- */
+.caso {
+  box-shadow:
+    0 24px 60px rgba(3, 12, 30, 0.45),
+    0 0 0 1px rgba(60, 207, 145, 0.25),
+    0 0 90px rgba(60, 207, 145, 0.12);
+}
+
+.caso__panel {
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.caso__panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.caso__union {
+  position: relative;
+  min-width: 110px;
+}
+
+/* Línea por donde viajan los datos entre la web y el sistema */
+.caso__union-linea {
+  position: absolute;
+  top: 50%;
+  left: -18px;
+  right: -18px;
+  height: 2px;
+  translate: 0 -50%;
+  background: repeating-linear-gradient(90deg, rgba(60, 207, 145, 0.55) 0 6px, transparent 6px 12px);
+}
+
+.caso__union-linea i {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--verde);
+  box-shadow: 0 0 10px var(--verde);
+  animation: dato-ida 2.4s linear infinite;
+}
+
+.caso__union-linea i:nth-child(2) {
+  background: var(--celeste);
+  box-shadow: 0 0 10px var(--celeste);
+  animation-name: dato-vuelta;
+  animation-delay: 0.8s;
+}
+
+.caso__union-linea i:nth-child(3) {
+  animation-delay: 1.6s;
+}
+
+@keyframes dato-ida {
+  from { left: 0; opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  to { left: calc(100% - 8px); opacity: 0; }
+}
+
+@keyframes dato-vuelta {
+  from { left: calc(100% - 8px); opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  to { left: 0; opacity: 0; }
+}
+
+/* Anillo que late alrededor del ícono ⇄ */
+.caso__union-icono::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--verde);
+  animation: latido 2.4s ease-out infinite;
+}
+
+@keyframes latido {
+  from { transform: scale(1); opacity: 0.7; }
+  to { transform: scale(1.9); opacity: 0; }
+}
+
+.caso__union-texto {
+  position: absolute;
+  top: calc(50% + 40px);
+  left: 50%;
+  translate: -50% 0;
+  white-space: nowrap;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7ee8b8;
+}
+
+/* Los 4 pasos de "Cómo se conectan" aparecen uno detrás del otro */
+.caso__conexion.aparecer:not(.visible) li {
+  opacity: 0;
+}
+
+.caso__conexion.visible li {
+  animation: aparecer 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.caso__conexion.visible li:nth-child(2) { animation-delay: 0.12s; }
+.caso__conexion.visible li:nth-child(3) { animation-delay: 0.24s; }
+.caso__conexion.visible li:nth-child(4) { animation-delay: 0.36s; }
+
+/* En pantallas medianas y celular los paneles van uno abajo del otro:
+   la línea pasa a ser vertical y el texto va al lado del ícono */
+@media (max-width: 1000px) {
+  .caso__union {
+    min-width: 0;
+    min-height: 72px;
+  }
+
+  .caso__union-linea {
+    top: -18px;
+    bottom: -18px;
+    left: 50%;
+    right: auto;
+    width: 2px;
+    height: auto;
+    translate: -50% 0;
+    background: repeating-linear-gradient(180deg, rgba(60, 207, 145, 0.55) 0 6px, transparent 6px 12px);
+  }
+
+  .caso__union-linea i {
+    top: 0;
+    left: -3px;
+    animation-name: dato-baja;
+  }
+
+  .caso__union-linea i:nth-child(2) {
+    animation-name: dato-sube;
+  }
+
+  .caso__union-texto {
+    top: 50%;
+    left: calc(50% + 42px);
+    translate: 0 -50%;
+  }
+}
+
+@keyframes dato-baja {
+  from { top: 0; opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  to { top: calc(100% - 8px); opacity: 0; }
+}
+
+@keyframes dato-sube {
+  from { top: calc(100% - 8px); opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  to { top: 0; opacity: 0; }
+}
+
+/* --- Sin movimiento para quien lo pidió en su sistema --- */
+@media (prefers-reduced-motion: reduce) {
+  .hero__linea,
+  .hero__stack-pista,
+  .caso__union-linea i,
+  .caso__union-icono::after,
+  .aparecer.visible,
+  .caso__conexion.visible li {
+    animation: none !important;
+  }
+
+  .caso__union-linea i,
+  .caso__union-icono::after {
+    display: none;
+  }
+
+  .hero__stack {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .hero__stack-pista {
+    flex-wrap: wrap;
+    width: auto;
+    row-gap: 10px;
+  }
+
+  .hero__stack-copia {
+    display: none;
   }
 }

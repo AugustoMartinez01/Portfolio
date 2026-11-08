@@ -2,10 +2,12 @@ import Ilustracion from './Ilustracion.jsx'
 import Galeria from './Galeria.jsx'
 import { linkPublicado } from '../data/enlaces.js'
 import { useIdioma } from '../i18n.jsx'
+import { useAparecer, moverBrillo } from '../animaciones.jsx'
 
 // Recibe el proyecto ya traducido al idioma elegido (ver Proyectos.jsx)
 export default function ProjectCard({ proyecto }) {
   const { t } = useIdioma()
+  const ref = useAparecer()
   const {
     id,
     categoria,
@@ -29,7 +31,12 @@ export default function ProjectCard({ proyecto }) {
   const capturas = imagenes?.length ? imagenes : imagen ? [imagen] : []
 
   return (
-    <article className={`proyecto proyecto--${categoria}${link ? ' proyecto--link' : ''}`} id={id}>
+    <article
+      ref={ref}
+      className={`proyecto brillo proyecto--${categoria}${link ? ' proyecto--link' : ''}`}
+      id={id}
+      onMouseMove={moverBrillo}
+    >
       <div className="proyecto__imagen">
         {capturas.length ? (
           <Galeria imagenes={capturas} titulo={titulo} />

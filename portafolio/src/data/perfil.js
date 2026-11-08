@@ -17,12 +17,29 @@ export const herramientas = [
   'HTML',
   'CSS',
   'JavaScript',
+  'TypeScript',
   'React',
+  'Next.js',
   'Vite',
+  'Tailwind CSS',
+  'Supabase',
+  'PostgreSQL',
+  'Electron',
   'Git',
   'GitHub',
   'Vercel',
 ]
 
 // Tecnologías que se muestran en la franja de abajo del inicio
-export const stack = ['React', 'Vite', 'TypeScript', 'Next.js', 'Supabase', 'Electron', 'Vercel']
+export const stack = [
+  'React',
+  'Vite',
+  'TypeScript',
+  'Next.js',
+  'Tailwind CSS',
+  'Supabase',
+  'PostgreSQL',
+  'Mercado Pago',
+  'Electron',
+  'Vercel',
+]
