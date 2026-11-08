@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { proyectos } from '../data/proyectos.js'
 import ProjectCard from './ProjectCard.jsx'
 import TituloSeccion from './TituloSeccion.jsx'
+import CasoDestacado from './CasoDestacado.jsx'
 import { useIdioma, proyectoEnIdioma } from '../i18n.jsx'
 
 const FILTROS = ['todos', 'cliente', 'propio', 'escritorio']
@@ -41,6 +42,9 @@ export default function Proyectos() {
             ))}
           </div>
         </div>
+
+        {/* Proyecto destacado: web de Serafín + sistema de gestión */}
+        {filtro === 'todos' && <CasoDestacado />}
 
         <div className="proyectos">
           {visibles.map((proyecto) => (
