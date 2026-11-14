@@ -43,8 +43,13 @@ export default function Proyectos() {
           </div>
         </div>
 
-        {/* Proyecto destacado: web de Serafín + sistema de gestión */}
-        {filtro === 'todos' && <CasoDestacado />}
+        {/* Proyectos destacados: Serafín (web + sistema) y Gallery Import (landing + CRM) */}
+        {filtro === 'todos' && (
+          <>
+            <CasoDestacado caso="serafin" />
+            <CasoDestacado caso="gallery" />
+          </>
+        )}
 
         <div className="proyectos">
           {visibles.map((proyecto) => (

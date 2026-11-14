@@ -3,9 +3,9 @@ import { linkWhatsApp, IconoWhatsApp } from './WhatsApp.jsx'
 import { useIdioma } from '../i18n.jsx'
 import { useAparecer, moverBrillo } from '../animaciones.jsx'
 
-// Proyecto destacado: la web de Serafín y el sistema de gestión, uno al lado del otro,
-// con cómo se conectan, las tecnologías y lo que incluye la implementación.
-// Los textos están en data/textos.js → destacado.
+// Proyectos destacados: la parte que ve el cliente y la que usa el negocio, una al lado de
+// la otra, con cómo se conectan, las tecnologías y lo que incluye la implementación.
+// Los textos están en data/textos.js → destacado (Serafín) y destacadoGallery (Gallery Import).
 
 const WEB = {
   link: 'https://cerrajeriaserafin.com.ar/',
@@ -49,6 +49,55 @@ const ICONOS_CONEXION = [
   'M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3z M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6 M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3',
 ]
 
+// Configuración de cada caso destacado
+const CASOS = {
+  serafin: {
+    id: 'destacado',
+    textos: 'destacado',
+    web: WEB,
+    sistema: { ...SISTEMA, href: '#sistema-cerrajerias', estado: 'estado--piloto' },
+    stack: STACK,
+    iconos: ICONOS_CONEXION,
+  },
+  gallery: {
+    id: 'destacado-gallery',
+    textos: 'destacadoGallery',
+    variante: 'gallery',
+    web: {
+      link: 'https://galleryimports.com.ar/',
+      dominio: 'galleryimports.com.ar',
+      capturas: ['/capturas/gallery-inicio.jpg', '/capturas/gallery-formulario.jpg'],
+    },
+    sistema: {
+      capturas: [
+        '/capturas/gallery-panel.jpg',
+        '/capturas/gallery-ficha.jpg',
+        '/capturas/gallery-panel-oscuro.jpg',
+      ],
+      href: '#gallery-import',
+      estado: 'estado--en-linea',
+    },
+    stack: [
+      'React',
+      'Vite',
+      'Tailwind CSS',
+      'Supabase',
+      'Row Level Security',
+      'Edge Functions',
+      'Resend',
+      'Meta Pixel',
+      'Google Analytics 4',
+      'Vercel',
+    ],
+    iconos: [
+      'M6 3h12v18H6z M9 8h6 M9 12h6 M9 16h4',
+      'M3 6h18v12H3z M3 7l9 6 9-6',
+      'M3 4h18v16H3z M9 4v16 M15 4v16',
+      'M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z',
+    ],
+  },
+}
+
 function Icono({ d, tamano = 22 }) {
   return (
     <svg
@@ -67,7 +116,7 @@ function Icono({ d, tamano = 22 }) {
   )
 }
 
-function Panel({ tipo, datos, textos, capturas, children }) {
+function Panel({ tipo, datos, textos, capturas, estado, children }) {
   return (
     <article className={`caso__panel brillo caso__panel--${tipo}`} onMouseMove={moverBrillo}>
       <div className="caso__panel-imagen">
@@ -77,7 +126,7 @@ function Panel({ tipo, datos, textos, capturas, children }) {
         <p className="caso__rol">{textos.rol}</p>
         <div className="caso__panel-titulo">
           <h3>{textos.titulo}</h3>
-          <span className={`estado ${tipo === 'web' ? 'estado--en-linea' : 'estado--piloto'}`}>
+          <span className={`estado ${tipo === 'web' ? 'estado--en-linea' : estado}`}>
             {textos.estado}
           </span>
         </div>
@@ -93,14 +142,15 @@ function Panel({ tipo, datos, textos, capturas, children }) {
   )
 }
 
-export default function CasoDestacado() {
+export default function CasoDestacado({ caso = 'serafin' }) {
   const { t } = useIdioma()
-  const d = t.destacado
+  const cfg = CASOS[caso]
+  const d = t[cfg.textos]
   const refCaso = useAparecer()
   const refConexion = useAparecer()
 
   return (
-    <div className="caso" id="destacado" ref={refCaso}>
+    <div className={`caso${cfg.variante ? ` caso--${cfg.variante}` : ''}`} id={cfg.id} ref={refCaso}>
       <div className="caso__cabecera">
         <p className="caso__etiqueta">
           <span aria-hidden="true">★</span> {d.etiqueta}
@@ -112,8 +162,8 @@ export default function CasoDestacado() {
       </div>
 
       <div className="caso__paneles">
-        <Panel tipo="web" datos={WEB} textos={d.web} capturas={WEB.capturas}>
-          <a href={WEB.link} target="_blank" rel="noreferrer" className="boton boton--chico caso__boton">
+        <Panel tipo="web" datos={cfg.web} textos={d.web} capturas={cfg.web.capturas}>
+          <a href={cfg.web.link} target="_blank" rel="noreferrer" className="boton boton--chico caso__boton">
             {d.web.boton}
           </a>
         </Panel>
@@ -129,12 +179,14 @@ export default function CasoDestacado() {
           <span className="caso__union-texto">{d.union}</span>
         </div>
 
-        <Panel tipo="sistema" textos={d.sistema} capturas={SISTEMA.capturas}>
-          <a href="#sistema-cerrajerias" className="boton boton--chico boton--contorno-oscuro caso__boton">
+        <Panel tipo="sistema" textos={d.sistema} capturas={cfg.sistema.capturas} estado={cfg.sistema.estado}>
+          <a href={cfg.sistema.href} className="boton boton--chico boton--contorno-oscuro caso__boton">
             {d.sistema.boton}
           </a>
         </Panel>
       </div>
+
+      {d.nota && <p className="caso__nota">{d.nota}</p>}
 
       <div className="caso__conexion" ref={refConexion}>
         <h4>{d.conexionTitulo}</h4>
@@ -142,7 +194,7 @@ export default function CasoDestacado() {
           {d.conexion.map((c, i) => (
             <li key={c.titulo}>
               <span className="caso__conexion-icono">
-                <Icono d={ICONOS_CONEXION[i]} />
+                <Icono d={cfg.iconos[i]} />
               </span>
               <div>
                 <strong>{c.titulo}</strong>
@@ -157,7 +209,7 @@ export default function CasoDestacado() {
         <div className="caso__stack">
           <h4>{d.stackTitulo}</h4>
           <ul className="chips">
-            {STACK.map((s) => (
+            {cfg.stack.map((s) => (
               <li key={s}>{s}</li>
             ))}
           </ul>

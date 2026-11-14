@@ -2266,3 +2266,25 @@ img {
     display: none;
   }
 }
+
+/* ---------- Segundo caso destacado: Gallery Import (landing + CRM) ---------- */
+.caso--gallery {
+  border-top-color: var(--francia-claro);
+  box-shadow:
+    0 24px 60px rgba(3, 12, 30, 0.45),
+    0 0 0 1px rgba(46, 123, 214, 0.3),
+    0 0 90px rgba(46, 123, 214, 0.14);
+}
+
+.caso--gallery .caso__etiqueta {
+  background: rgba(46, 123, 214, 0.16);
+  border-color: rgba(156, 195, 240, 0.55);
+  color: var(--celeste);
+}
+
+.caso__nota {
+  margin-top: 12px;
+  color: #8ea3c4;
+  font-size: 0.85rem;
+  text-align: center;
+}
