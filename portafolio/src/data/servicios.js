@@ -14,7 +14,7 @@ export const servicios = [
   {
     id: 'base-de-datos',
     tono: 'celeste',
-    prueba: 'Agendalo · Mis Gastos',
+    prueba: 'Gallery Import · Agendalo',
     icono:
       'M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3z M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6 M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3',
   },
@@ -27,7 +27,7 @@ export const servicios = [
   {
     id: 'panel',
     tono: 'azul',
-    prueba: 'Serafín Cerrajería',
+    prueba: 'Serafín · Gallery Import',
     icono: 'M4 4h16v16H4z M4 9h16 M9 9v11',
   },
   {
@@ -39,7 +39,7 @@ export const servicios = [
   {
     id: 'dominio',
     tono: 'verde',
-    prueba: 'tukodes.com.ar',
+    prueba: 'Serafín · Gallery · tukodes',
     icono:
       'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z M3 12h18 M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9 M12 3c-2.5 2.5-3.8 5.5-3.8 9s1.3 6.5 3.8 9',
   },

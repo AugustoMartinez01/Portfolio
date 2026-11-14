@@ -1,0 +1,52 @@
+GALLERY IMPORT — Textos para Instagram y LinkedIn
+(Las capturas usan datos de ejemplo, no hay contactos reales)
+
+============================================================
+POST CARRUSEL (subir en orden: post-1 … post-5, formato 4:5)
+============================================================
+Nuevo trabajo en línea: Gallery Import 🚀
+Una landing que junta contactos y un panel comercial (CRM) propio para que el equipo de ventas siga a cada persona hasta cerrar la venta.
+
+📋 Todos los contactos en un solo lugar, con filtros y buscador
+🟢 Etapas: sin contactar → contactado → propuesta → venta
+💬 WhatsApp y mail en un clic, asesor asignado y notas
+📊 Exportación a Excel y aviso por mail en cada contacto nuevo
+
+¿Tu negocio recibe consultas y se te pierden? Escribime por DM 👇
+🌐 galleryimports.com.ar
+
+#desarrolloweb #crm #landingpage #tucuman #emprendedores
+
+============================================================
+HISTORIA 1 (historia-1-link.jpg)
+============================================================
+Poné el sticker de ENLACE sobre el recuadro punteado:
+  URL: https://galleryimports.com.ar
+  Texto del sticker: Mirá la página
+
+============================================================
+HISTORIA 2 (historia-2-panel.jpg)
+============================================================
+Opcional: sticker de "Preguntas" o de enlace a tukodes.com.ar
+  Texto: ¿Querés uno para tu negocio?
+
+============================================================
+POST DE LINKEDIN (opcional, con las mismas 5 imágenes)
+============================================================
+Nuevo proyecto en línea: Gallery Import 🚀
+
+Armé una landing que funciona como embudo de contactos y, lo que más me gustó hacer, un panel comercial (CRM) a medida para el equipo de ventas.
+
+Qué resuelve:
+• Cada persona que deja sus datos llega al panel y avisa por mail al instante.
+• Cada contacto tiene su etapa: sin contactar, contactado, propuesta, venta o seguimiento.
+• Asesor asignado, notas y botones para escribir por WhatsApp o mail en un clic.
+• Filtros por período, estado, provincia y asesor, y exportación a Excel.
+• Meta Pixel y GA4 para saber qué campaña trae cada contacto.
+
+Stack: React, Vite, Tailwind CSS y Supabase (Auth, Row Level Security y Edge Functions), publicado en Vercel.
+
+🌐 galleryimports.com.ar
+Las capturas usan datos de ejemplo.
+
+#DesarrolloWeb #React #Supabase #CRM #Freelance
