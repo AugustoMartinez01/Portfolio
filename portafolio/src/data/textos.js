@@ -34,8 +34,10 @@ export const textos = {
       stack: 'Tecnologías que uso',
       panel: 'Proyectos en marcha',
       panelTitulo: 'Ahora mismo',
-      estrellaTitulo: 'Proyecto estrella:',
-      estrellaTexto: 'web + sistema de gestión conectados, funcionando en una cerrajería real.',
+      destacados: [
+        { caso: 'serafin', titulo: 'Serafín Cerrajería:', texto: 'web + sistema de gestión, funcionando en una cerrajería real.' },
+        { caso: 'gallery', titulo: 'Gallery Import:', texto: 'landing + CRM para que ningún contacto se pierda.' },
+      ],
     },
 
     proyectos: {
@@ -61,6 +63,12 @@ export const textos = {
       irA: (n) => `Ver captura ${n}`,
       visor: (titulo) => `Capturas de ${titulo}`,
       cerrar: 'Cerrar',
+    },
+
+    destacadoPestanas: {
+      aria: 'Proyectos destacados',
+      serafin: { tipo: 'Proyecto estrella', nombre: 'Serafín Cerrajería', detalle: 'Web + sistema de gestión' },
+      gallery: { tipo: 'Proyecto destacado', nombre: 'Gallery Import', detalle: 'Landing + CRM de contactos' },
     },
 
     destacado: {
@@ -255,8 +263,10 @@ export const textos = {
       stack: 'Technologies I use',
       panel: 'Ongoing projects',
       panelTitulo: 'Right now',
-      estrellaTitulo: 'Flagship project:',
-      estrellaTexto: 'website + management system, connected and running in a real locksmith shop.',
+      destacados: [
+        { caso: 'serafin', titulo: 'Serafín Cerrajería:', texto: 'website + management system, running in a real locksmith shop.' },
+        { caso: 'gallery', titulo: 'Gallery Import:', texto: 'landing page + CRM so no lead gets lost.' },
+      ],
     },
 
     proyectos: {
@@ -282,6 +292,12 @@ export const textos = {
       irA: (n) => `View screenshot ${n}`,
       visor: (titulo) => `${titulo} screenshots`,
       cerrar: 'Close',
+    },
+
+    destacadoPestanas: {
+      aria: 'Featured projects',
+      serafin: { tipo: 'Flagship project', nombre: 'Serafín Cerrajería', detalle: 'Website + management system' },
+      gallery: { tipo: 'Featured project', nombre: 'Gallery Import', detalle: 'Landing page + lead CRM' },
     },
 
     destacado: {
@@ -475,8 +491,10 @@ export const textos = {
       stack: "Technologies que j'utilise",
       panel: 'Projets en cours',
       panelTitulo: 'En ce moment',
-      estrellaTitulo: 'Projet phare :',
-      estrellaTexto: 'site web + logiciel de gestion connectés, en service dans une vraie serrurerie.',
+      destacados: [
+        { caso: 'serafin', titulo: 'Serafín Cerrajería :', texto: 'site web + logiciel de gestion, en service dans une vraie serrurerie.' },
+        { caso: 'gallery', titulo: 'Gallery Import :', texto: 'landing page + CRM pour ne perdre aucun contact.' },
+      ],
     },
 
     proyectos: {
@@ -502,6 +520,12 @@ export const textos = {
       irA: (n) => `Voir la capture ${n}`,
       visor: (titulo) => `Captures de ${titulo}`,
       cerrar: 'Fermer',
+    },
+
+    destacadoPestanas: {
+      aria: 'Projets à la une',
+      serafin: { tipo: 'Projet phare', nombre: 'Serafín Cerrajería', detalle: 'Site web + logiciel de gestion' },
+      gallery: { tipo: 'Projet à la une', nombre: 'Gallery Import', detalle: 'Landing page + CRM de contacts' },
     },
 
     destacado: {

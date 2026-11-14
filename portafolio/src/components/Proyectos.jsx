@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { proyectos } from '../data/proyectos.js'
 import ProjectCard from './ProjectCard.jsx'
 import TituloSeccion from './TituloSeccion.jsx'
-import CasoDestacado from './CasoDestacado.jsx'
+import CasosDestacados from './CasosDestacados.jsx'
 import { useIdioma, proyectoEnIdioma } from '../i18n.jsx'
 
 const FILTROS = ['todos', 'cliente', 'propio', 'escritorio']
@@ -10,6 +10,13 @@ const FILTROS = ['todos', 'cliente', 'propio', 'escritorio']
 export default function Proyectos() {
   const { t, idioma } = useIdioma()
   const [filtro, setFiltro] = useState('todos')
+
+  // Si desde el hero piden abrir un destacado, se vuelve a "Todos" para que se vea
+  useEffect(() => {
+    const volver = () => setFiltro('todos')
+    window.addEventListener('abrir-destacado', volver)
+    return () => window.removeEventListener('abrir-destacado', volver)
+  }, [])
 
   const cantidad = (f) =>
     f === 'todos' ? proyectos.length : proyectos.filter((p) => p.categoria === f).length
@@ -43,13 +50,8 @@ export default function Proyectos() {
           </div>
         </div>
 
-        {/* Proyectos destacados: Serafín (web + sistema) y Gallery Import (landing + CRM) */}
-        {filtro === 'todos' && (
-          <>
-            <CasoDestacado caso="serafin" />
-            <CasoDestacado caso="gallery" />
-          </>
-        )}
+        {/* Proyectos destacados en pestañas: Serafín (web + sistema) y Gallery Import (landing + CRM) */}
+        {filtro === 'todos' && <CasosDestacados />}
 
         <div className="proyectos">
           {visibles.map((proyecto) => (

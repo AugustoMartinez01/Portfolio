@@ -60,14 +60,25 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Acceso directo al proyecto estrella (web + sistema de Serafín) */}
-          <a href="#destacado" className="hero__estrella">
-            <span className="hero__estrella-icono" aria-hidden="true">★</span>
-            <span>
-              <strong>{t.hero.estrellaTitulo}</strong> {t.hero.estrellaTexto}
-            </span>
-            <span className="hero__estrella-flecha" aria-hidden="true">→</span>
-          </a>
+          {/* Accesos directos a los proyectos destacados (abren su pestaña) */}
+          <div className="hero__estrellas">
+            {t.hero.destacados.map((d) => (
+              <a
+                key={d.caso}
+                href="#destacado"
+                className={`hero__estrella hero__estrella--${d.caso}`}
+                onClick={() =>
+                  window.dispatchEvent(new CustomEvent('abrir-destacado', { detail: d.caso }))
+                }
+              >
+                <span className="hero__estrella-icono" aria-hidden="true">★</span>
+                <span>
+                  <strong>{d.titulo}</strong> {d.texto}
+                </span>
+                <span className="hero__estrella-flecha" aria-hidden="true">→</span>
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Datos destacados, cada uno con la línea de color de su sección */}

@@ -52,7 +52,7 @@ const ICONOS_CONEXION = [
 // Configuración de cada caso destacado
 const CASOS = {
   serafin: {
-    id: 'destacado',
+    id: 'destacado-serafin',
     textos: 'destacado',
     web: WEB,
     sistema: { ...SISTEMA, href: '#sistema-cerrajerias', estado: 'estado--piloto' },
