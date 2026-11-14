@@ -12,23 +12,14 @@ export const perfil = {
   instagram: 'https://www.instagram.com/tukodesdev/',
 }
 
-// Herramientas con las que trabajás (se muestran en "Sobre mí")
-export const herramientas = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'TypeScript',
-  'React',
-  'Next.js',
-  'Vite',
-  'Tailwind CSS',
-  'Supabase',
-  'PostgreSQL',
-  'Electron',
-  'Git',
-  'GitHub',
-  'Vercel',
-]
+// Herramientas y tecnologías con las que trabajás (se muestran en "Sobre mí", agrupadas).
+// El nombre de cada grupo está en data/textos.js → sobreMi.grupos
+export const herramientas = {
+  frontend: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Vite', 'Tailwind CSS'],
+  datos: ['Supabase', 'PostgreSQL', 'Row Level Security', 'Edge Functions', 'Serverless'],
+  integraciones: ['Mercado Pago', 'WhatsApp', 'Resend', 'Meta Pixel', 'Google Analytics 4', 'Riot Games API'],
+  apps: ['Electron', 'PWA', 'Excel · Word · PDF', 'Vercel', 'Git', 'GitHub'],
+}
 
 // Tecnologías que se muestran en la franja de abajo del inicio
 export const stack = [
@@ -42,4 +33,9 @@ export const stack = [
   'Mercado Pago',
   'Electron',
   'Vercel',
+  'Row Level Security',
+  'Edge Functions',
+  'Meta Pixel',
+  'Google Analytics 4',
+  'PWA',
 ]

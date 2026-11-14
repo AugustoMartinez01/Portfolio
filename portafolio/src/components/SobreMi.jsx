@@ -34,11 +34,18 @@ export default function SobreMi() {
 
           <div className="sobre__tarjeta">
             <h3 className="sobre__subtitulo">{t.sobreMi.herramientas}</h3>
-            <ul className="chips chips--grandes">
-              {herramientas.map((h) => (
-                <li key={h}>{h}</li>
+            <div className="herramientas">
+              {Object.entries(herramientas).map(([grupo, lista]) => (
+                <div key={grupo} className={`herramientas__grupo herramientas__grupo--${grupo}`}>
+                  <p className="herramientas__titulo">{t.sobreMi.grupos[grupo]}</p>
+                  <ul className="chips chips--herramientas">
+                    {lista.map((h) => (
+                      <li key={h}>{h}</li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </div>

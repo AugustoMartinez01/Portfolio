@@ -2439,3 +2439,187 @@ img {
     animation: none;
   }
 }
+
+/* ---------- Servicios en pestañas (más servicios sin que la sección crezca) ---------- */
+.servicios__grupos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.servicios__grupo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1.5px solid #2e4f86;
+  background: transparent;
+  color: #c4d3ea;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.servicios__grupo:hover {
+  border-color: var(--celeste);
+  color: #fff;
+}
+
+.servicios__grupo.activo {
+  background: #fff;
+  border-color: #fff;
+  color: var(--marino-950);
+}
+
+.servicios__grupo-cantidad {
+  display: grid;
+  place-items: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: rgba(156, 195, 240, 0.18);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+}
+
+.servicios__grupo.activo .servicios__grupo-cantidad {
+  background: var(--francia);
+  color: #fff;
+}
+
+.servicios__total {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: #7f93b3;
+}
+
+.seccion--servicios .servicios {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+  animation: caso-entra 0.4s ease both;
+}
+
+.seccion--servicios .servicio {
+  gap: 10px;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.seccion--servicios .servicio__icono {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+}
+
+.seccion--servicios .servicio h3 {
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.seccion--servicios .servicio__texto {
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.seccion--servicios .servicio__prueba {
+  padding-top: 10px;
+  font-size: 0.7rem;
+}
+
+@media (max-width: 1000px) {
+  .seccion--servicios .servicios {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* En el celular: carrusel que se desliza de costado */
+@media (max-width: 640px) {
+  .servicios__grupos {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-right: -20px;
+    padding-right: 20px;
+    scrollbar-width: none;
+  }
+
+  .servicios__grupos::-webkit-scrollbar {
+    display: none;
+  }
+
+  .servicios__grupo {
+    flex-shrink: 0;
+  }
+
+  .servicios__total {
+    display: none;
+  }
+
+  .seccion--servicios .servicios {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+    margin-right: -20px;
+    padding: 6px 20px 14px 0;
+    scrollbar-width: none;
+  }
+
+  .seccion--servicios .servicios::-webkit-scrollbar {
+    display: none;
+  }
+
+  .seccion--servicios .servicio {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+  }
+
+  .seccion--servicios .servicio:hover {
+    transform: none;
+  }
+}
+
+/* ---------- Sobre mí: herramientas agrupadas ---------- */
+.herramientas {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.herramientas__titulo {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7f93b3;
+}
+
+.chips--herramientas {
+  margin-top: 8px;
+  gap: 7px;
+}
+
+.chips--herramientas li {
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  background: transparent;
+  border: 1.5px solid #2e4f86;
+  color: #fff;
+}
+
+.herramientas__grupo--frontend .chips--herramientas li { border-color: rgba(46, 123, 214, 0.75); }
+.herramientas__grupo--datos .chips--herramientas li { border-color: rgba(60, 207, 145, 0.6); }
+.herramientas__grupo--integraciones .chips--herramientas li { border-color: rgba(156, 195, 240, 0.6); }
+.herramientas__grupo--apps .chips--herramientas li { border-color: rgba(154, 107, 255, 0.6); }
