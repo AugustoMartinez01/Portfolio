@@ -8,7 +8,7 @@
 // imagen: ruta a una captura dentro de /public, por ejemplo '/capturas/agl.png'.
 // imagenes: lista de varias capturas; si la cargás, la tarjeta muestra flechas para pasarlas.
 //         Si la dejás en '', se muestra la ilustración de "visual".
-// categoria: 'cliente' | 'propio' | 'escritorio' (color de la tarjeta y filtros)
+// categoria: 'cliente' | 'propio' (color de la tarjeta y filtros)
 // visual: 'web' | 'ranking' | 'finanzas' | 'escritorio'
 // en / fr: los mismos textos en inglés y en francés (titulo, tipo, descripcion, puntos, tecnologias, nota).
 //     Lo que no esté traducido se muestra igual que en español.
@@ -194,7 +194,7 @@ export const proyectos = [
     titulo: 'Agendalo — Turnos online',
     tipo: 'Producto propio · SaaS',
     descripcion:
-      'Sistema de turnos online para negocios: cada uno tiene su propia página de reservas, con su logo y sus colores, y un panel para manejar la agenda. Lo vendo como suscripción mensual y lo administro desde un panel propio.',
+      'Sistema de turnos online para negocios: cada uno tiene su propia página de reservas, con su logo y sus colores, y un panel para manejar la agenda. Pensado para venderse como suscripción mensual, con un panel propio para administrarlo.',
     puntos: [
       'Página de reservas por negocio: servicio, día y horario libre desde el celular',
       'Agenda con calendario mensual, turnos para confirmar y carga manual',
@@ -206,7 +206,7 @@ export const proyectos = [
     estado: 'en-desarrollo',
     demo: 'https://agendalo-alpha.vercel.app/',
     codigo: '',
-    nota: 'Producto comercial · código privado',
+    nota: 'Maqueta · código privado',
     imagen: '',
     imagenes: [
       '/capturas/agendalo-agenda.jpg',
@@ -221,7 +221,7 @@ export const proyectos = [
     en: {
       titulo: 'Agendalo — Online booking',
       tipo: 'Own product · SaaS',
-      descripcion: 'Online booking system for businesses: each one gets its own booking page, with its logo and colors, and a dashboard to manage the schedule. I sell it as a monthly subscription and run it from my own admin panel.',
+      descripcion: 'Online booking system for businesses: each one gets its own booking page, with its logo and colors, and a dashboard to manage the schedule. Designed to be sold as a monthly subscription, with its own admin panel.',
       puntos: [
         'Booking page for each business: service, day and free time slot, from the phone',
         'Schedule with a monthly calendar, bookings to confirm and manual entries',
@@ -229,13 +229,13 @@ export const proyectos = [
         'Admin panel: free trials, payments and automatic expirations',
         'The database prevents overlapping bookings and each business only sees its own data',
       ],
-      nota: 'Commercial product · private code',
+      nota: 'Mockup · private code',
     },
     // Textos en francés
     fr: {
       titulo: 'Agendalo — Réservation en ligne',
       tipo: 'Produit propre · SaaS',
-      descripcion: 'Système de prise de rendez-vous en ligne pour les commerces : chacun a sa propre page de réservation, avec son logo et ses couleurs, et un tableau de bord pour gérer son agenda. Je le vends sous forme d\'abonnement mensuel et je le gère depuis mon propre panneau d\'administration.',
+      descripcion: 'Système de prise de rendez-vous en ligne pour les commerces : chacun a sa propre page de réservation, avec son logo et ses couleurs, et un tableau de bord pour gérer son agenda. Pensé pour être vendu sous forme d\'abonnement mensuel, avec son propre panneau d\'administration.',
       puntos: [
         'Page de réservation pour chaque commerce : service, jour et créneau libre, depuis le téléphone',
         'Agenda avec calendrier mensuel, rendez-vous à confirmer et ajout manuel',
@@ -243,7 +243,7 @@ export const proyectos = [
         'Panneau d\'administration : essais gratuits, paiements et échéances automatiques',
         'La base de données empêche les rendez-vous qui se chevauchent et chaque commerce ne voit que ses propres données',
       ],
-      nota: 'Produit commercial · code privé',
+      nota: 'Maquette · code privé',
     },
   },
   {
@@ -464,72 +464,6 @@ export const proyectos = [
         'Supabase',
         'Appli installable (PWA)',
       ],
-    },
-  },
-  {
-    id: 'escala-wisc4',
-    categoria: 'escritorio',
-    titulo: 'Escala WISC-IV',
-    tipo: 'Software de escritorio',
-    descripcion:
-      'Programa de escritorio para corregir la escala de inteligencia WISC-IV con el baremo argentino. Automatiza el cálculo de puntajes para que el profesional ahorre tiempo y evite errores.',
-    puntos: [
-      'Corrección automática con baremo argentino',
-      'Sistema propio de licencias',
-      'Interpretación automática e informe en Word o PDF',
-      'Se descarga e instala en la computadora',
-    ],
-    tecnologias: ['Electron', 'JavaScript', 'Sistema de licencias', 'Informes Word y PDF'],
-    estado: 'en-desarrollo',
-    demo: '',
-    codigo: '',
-    nota: 'Software comercial · código privado',
-    imagen: '',
-    imagenes: [
-      '/capturas/wisc-resultados.jpg',
-      '/capturas/wisc-inicio.jpg',
-      '/capturas/wisc-puntajes.jpg',
-      '/capturas/wisc-observaciones.jpg',
-      '/capturas/wisc-informe.jpg',
-    ],
-    visual: 'escritorio',
-    // Textos en inglés (si falta alguno, se usa el de español)
-    en: {
-      titulo: 'WISC-IV Scoring',
-      tipo: 'Desktop software',
-      descripcion: 'Desktop program to score the WISC-IV intelligence scale using Argentine norms. It automates the score calculations so professionals save time and avoid mistakes.',
-      puntos: [
-        'Automatic scoring with Argentine norms',
-        'Custom licensing system',
-        'Automatic interpretation and report in Word or PDF',
-        'Downloaded and installed on the computer',
-      ],
-      tecnologias: [
-        'Electron',
-        'JavaScript',
-        'Licensing system',
-        'Word and PDF reports',
-      ],
-      nota: 'Commercial software · private code',
-    },
-    // Textos en francés
-    fr: {
-      titulo: 'Correction WISC-IV',
-      tipo: 'Logiciel de bureau',
-      descripcion: 'Logiciel de bureau pour corriger l\'échelle d\'intelligence WISC-IV avec l\'étalonnage argentin. Il automatise le calcul des scores pour que le professionnel gagne du temps et évite les erreurs.',
-      puntos: [
-        'Correction automatique avec étalonnage argentin',
-        'Système de licences propre',
-        'Interprétation automatique et rapport en Word ou PDF',
-        'Se télécharge et s\'installe sur l\'ordinateur',
-      ],
-      tecnologias: [
-        'Electron',
-        'JavaScript',
-        'Système de licences',
-        'Rapports Word et PDF',
-      ],
-      nota: 'Logiciel commercial · code privé',
     },
   },
 ]

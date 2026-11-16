@@ -5,7 +5,7 @@ import TituloSeccion from './TituloSeccion.jsx'
 import CasosDestacados from './CasosDestacados.jsx'
 import { useIdioma, proyectoEnIdioma } from '../i18n.jsx'
 
-const FILTROS = ['todos', 'cliente', 'propio', 'escritorio']
+const FILTROS = ['todos', 'cliente', 'propio']
 
 export default function Proyectos() {
   const { t, idioma } = useIdioma()

@@ -116,13 +116,6 @@ export const servicios = [
     icono: 'M3 3v18h18 M7 14l4-4 3 3 5-6',
   },
   {
-    id: 'escritorio',
-    grupo: 'medida',
-    tono: 'celeste',
-    prueba: 'Escala WISC-IV',
-    icono: 'M4 4h16v16H4z M4 8h16 M12 11v6 M9 14l3 3 3-3',
-  },
-  {
     id: 'apis',
     grupo: 'medida',
     tono: 'verde',
